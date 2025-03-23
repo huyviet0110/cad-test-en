@@ -287,8 +287,8 @@ const quizData = [
         options: [
             "current variable_name",
             "\$[variable_name]",
-            "<variable_name>",
-            "<variable_name>.do?WSDL"
+            "< variable_name >",
+            "< variable_name >.do?WSDL"
         ],
         correct: [1],
         explanation: "The syntax \$[variable_name] is used to indicate a variable in a SOAP Message. Reference: Tutorial: Handling a SOAP Response in ServiceNow"
@@ -565,10 +565,10 @@ const quizData = [
         question: "When configuring the content of an Email Notification, which syntax should be used to reference the properties of an event triggering the Notification?",
         type: "single",
         options: [
-            "${event.<property name>}",
-            "${current.<property name>}",
-            "${property name>.getDisplayValue()}",
-            "${gs.<property name>}"
+            "${event.< property name >}",
+            "${current.< property name >}",
+            "${< property name >.getDisplayValue()}",
+            "${gs.< property name >}"
         ],
         correct: [0],
         explanation: "The correct syntax to reference event properties in an Email Notification is ${event.<property name>}. Reference: https://www.servicenow.com/community/it-service-management-forum/email-notification/mp/695221"
