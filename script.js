@@ -1832,7 +1832,7 @@ function submitQuiz() {
             : selectedValues.length === 1 && selectedValues[0] === item.correct[0];
 
         submittedResults[index] = isCorrect
-            ? `<span class="correct">Correct</span><br><div class="explanation">${item.explanation}</div>`
+            ? `<span class="correct">Correct: ${item.correct.map(i => String.fromCharCode(65 + i)).join(', ')}</span><br><div class="explanation">${item.explanation}</div>`
             : `<span class="incorrect">Incorrect</span> - Correct Answer: ${item.correct.map(i => String.fromCharCode(65 + i)).join(', ')}<br><div class="explanation">${item.explanation}</div>`;
 
         const resultText = document.getElementById(`result-q${index}`);
