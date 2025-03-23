@@ -571,7 +571,7 @@ const quizData = [
             "${gs.< property name >}"
         ],
         correct: [0],
-        explanation: "The correct syntax to reference event properties in an Email Notification is ${event.<property name>}. Reference: https://www.servicenow.com/community/it-service-management-forum/email-notification/mp/695221"
+        explanation: "The correct syntax to reference event properties in an Email Notification is ${event.< property name >}. Reference: https://www.servicenow.com/community/it-service-management-forum/email-notification/mp/695221"
     },
     {
         question: "In a Business Rule, which one of the following returns true if the currently logged in user has the admin role?",
