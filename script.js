@@ -5292,7 +5292,7 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = quizData;
 }
 
-const QUESTIONS_PER_PAGE = 10;
+const QUESTIONS_PER_PAGE = 50;
 let currentPage = 1;
 let selectedAnswers = {}; // Lưu trữ trạng thái đã chọn
 let submittedResults = {}; // Lưu trữ kết quả sau khi submit
