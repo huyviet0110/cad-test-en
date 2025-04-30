@@ -51,28 +51,6 @@ const quizData = [
             "Storing server-side script logic in a Script Include allows execution only when called, hides logic in the ServiceNow Store, and centralizes edits.",
     },
     {
-        question:
-            "When designing and creating a form, what do you create to organize the form's fields?",
-        type: "single",
-        options: ["Button", "Related List", "Section", "Tab"],
-        correct: [2],
-        explanation: "Sections are created to organize fields on a form in ServiceNow.",
-    },
-    {
-        question:
-            "You are developing a MyApp application with a table, Table A. When installing the MyApp application on an instance, the records of Table A need to be installed as part of the application. The records of Table A will be installed when:",
-        type: "single",
-        options: [
-            "Table A is active and extends the Task table.",
-            "The records of Table A are added to the application record using the [Create application file] context menu item.",
-            "Table A has an auto-number counter for new records.",
-            "Table A is not included in the [System Clone] > [Exclude Tables] list.",
-        ],
-        correct: [1],
-        explanation:
-            "Records of Table A are installed when added to the application record using the [Create application file] context menu item.",
-    },
-    {
         question: "Name three ways to create a ServiceNow table.",
         type: "multiple",
         options: [
@@ -109,13 +87,6 @@ const quizData = [
             "gs.log() is not used for logging in private scope application server-side scripts.",
     },
     {
-        question: "Which types of scripts run on the server?",
-        type: "multiple",
-        options: ["Business Rule", "Client Script", "UI Policy", "Script Action", "Scheduled Job"],
-        correct: [0, 3, 4],
-        explanation: "Business Rules, Script Actions, and Scheduled Jobs run on the server.",
-    },
-    {
         question:
             "When creating a table in a private scope application, which four access controls are created for the table?",
         type: "single",
@@ -131,19 +102,6 @@ const quizData = [
     },
     {
         question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation: "gs.hasRole('admin') returns true if the logged-in user has the admin role.",
-    },
-    {
-        question:
             "Which of the following steps can be used to import new data from a spreadsheet into ServiceNow?",
         type: "single",
         options: [
@@ -155,14 +113,6 @@ const quizData = [
         correct: [0],
         explanation:
             "To import data from a spreadsheet, load the data, create a transform map, and run the most-voted transform.",
-    },
-    {
-        question:
-            "The business rule script template is as follows: This type of JavaScript function is known as:",
-        type: "single",
-        options: ["Constructor", "Scope", "Anonymous", "Self-invoking"],
-        correct: [3],
-        explanation: "The business rule script template is a self-invoking JavaScript function.",
     },
     {
         question:
@@ -333,39 +283,6 @@ const quizData = [
         explanation: "Client-side scripts manage the database and backend.",
     },
     {
-        question: "What is the best UX format for use with lists and forms?",
-        type: "single",
-        options: ["Form", "List", "Standard", "Classic"],
-        correct: [3],
-        explanation: "The Classic UX format is best for lists and forms.",
-    },
-    {
-        question: "Which of the following are true about ServiceNow reports?",
-        type: "multiple",
-        options: [
-            "All users can view shared reports.",
-            "Data can be represented graphically.",
-            "All users can generate reports on any table.",
-            "Authorized users can run them on demand.",
-            "They can be scheduled to run and distributed via email.",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "ServiceNow reports can represent data graphically, be run on demand by authorized users, and be scheduled for email distribution.",
-    },
-    {
-        question: "Which of the following is NOT supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Running a flow from a MetricBase trigger",
-            "Testing a flow using rollback",
-            "Using delegated developers",
-            "Calling a subflow from a flow",
-        ],
-        correct: [1],
-        explanation: "Testing a flow using rollback is not supported in Flow Designer.",
-    },
-    {
         question:
             "When configuring access control without conditions or scripts, which of the following statements is NOT correct?",
         type: "single",
@@ -447,13 +364,6 @@ const quizData = [
             "A scoped application with Flow Designer content specific to a particular application is called a Spoke.",
     },
     {
-        question: "Which of the following is NOT part of Form Designer?",
-        type: "single",
-        options: ["Form Layout", "Page Header", "Schema Map", "Field Navigator"],
-        correct: [2],
-        explanation: "Schema Map is not part of Form Designer.",
-    },
-    {
         question: "Which of the following applies to the GlideUser (g_user) method?",
         type: "single",
         options: [
@@ -528,26 +438,6 @@ const quizData = [
             "The Application Picker is used to select the application to download and install.",
     },
     {
-        question: "Which of the following cannot be debugged using the Field Watcher?",
-        type: "single",
-        options: ["Business Rules", "Script Includes", "Client Scripts", "Access Controls"],
-        correct: [1],
-        explanation: "Script Includes cannot be debugged using the Field Watcher.",
-    },
-    {
-        question: "When evaluating access controls, ServiceNow searches and evaluates:",
-        type: "single",
-        options: [
-            "Matches for the current table only",
-            "Matches for the current field only",
-            "From the most specific match to the most general match",
-            "From the most general match to the most specific match",
-        ],
-        correct: [2],
-        explanation:
-            "ServiceNow evaluates access controls from the most specific match to the most general match.",
-    },
-    {
         question: "What does a table that extends another table do?",
         type: "single",
         options: [
@@ -561,39 +451,12 @@ const quizData = [
     },
     {
         question:
-            "Which of the following does NOT apply to the Weight field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight for the same record and recipient is sent",
-            "A weight value of zero means the email is not sent",
-            "The default weight value is zero",
-            "A weight value of zero means the notification is always sent when the notification’s sending criteria are met",
-        ],
-        correct: [1],
-        explanation: "A weight value of zero does not mean the email is not sent.",
-    },
-    {
-        question:
             "Which report types can be created by right-clicking a column header in a table’s list?",
         type: "single",
         options: ["Bar, Pie, Histogram, and Line", "Bar", "Bar, Pie, and Histogram", "Bar and Pie"],
         correct: [3],
         explanation:
             "Bar and Pie reports can be created by right-clicking a column header in a table’s list.",
-    },
-    {
-        question:
-            "When configuring the content of an email notification, which syntax should be used to reference the properties of the event that triggers the notification?",
-        type: "single",
-        options: [
-            "${event.<property_name>}",
-            "${current.<property_name>}",
-            "${<property_name>.getDisplayValue()}",
-            "${gs.<property_name>}",
-        ],
-        correct: [0],
-        explanation:
-            "The syntax ${event.<property_name>} is used to reference event properties in email notifications.",
     },
     {
         question:
@@ -610,20 +473,6 @@ const quizData = [
             "Application Properties allow developers or administrators to change the application’s behavior without modifying application artifacts.",
     },
     {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Sources",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "Transform Map is used to determine the relationship between fields in an Import Set table and an existing ServiceNow table.",
-    },
-    {
         question: "Which of the following is NOT a method in the ServiceNow REST API?",
         type: "single",
         options: ["Copy", "Post", "Get", "Delete"],
@@ -638,27 +487,6 @@ const quizData = [
         explanation: "Caller Permission is not an option for the Caller Access field.",
     },
     {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in the content frame or a separate tab or window",
-            "A group of menus or pages providing related information and functionality to end users",
-            "A method to allow users to quickly access information and services by filtering items in the Application Navigator",
-            "A web-based method to provide software to end users",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a function within an application menu, such as opening a page in the content frame or a separate tab or window.",
-    },
-    {
-        question:
-            "When creating a new application file in a scoped application, cross-scope access is enabled by default for which of the following?",
-        type: "single",
-        options: ["REST Messages", "Table", "Script Include", "Workflow"],
-        correct: [1],
-        explanation: "Cross-scope access is enabled by default for Tables in a scoped application.",
-    },
-    {
         question: "What is the ServiceNow Store?",
         type: "single",
         options: [
@@ -670,18 +498,6 @@ const quizData = [
         correct: [1],
         explanation:
             "The ServiceNow Store is a marketplace for free and paid certified ServiceNow applications and integrations.",
-    },
-    {
-        question: "Which of the following is NOT supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Calling a subflow from a flow",
-            "Testing a flow using rollback",
-            "Using delegated developers",
-            "Running a flow from a MetricBase trigger",
-        ],
-        correct: [1],
-        explanation: "Testing a flow using rollback is not supported in Flow Designer.",
     },
     {
         question:
@@ -785,33 +601,6 @@ const quizData = [
     },
     {
         question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole('admin') returns true if the currently logged-in user has the admin role.",
-    },
-    {
-        question: "Which of the following methods are useful in access control scripts?",
-        type: "single",
-        options: [
-            "g_user.hasRole() and current.isNewRecord()",
-            "gs.hasRole() and current.isNewRecord()",
-            "g_user.hasRole() and current.isNew()",
-            "gs.hasRole() and current.isNew()",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole() and current.isNewRecord() are useful methods in access control scripts.",
-    },
-    {
-        question:
             "Access control debug information identifies whether each access control element granted or denied access. Elements are displayed in the debug information in the order they are evaluated. In which order are access control elements evaluated?",
         type: "single",
         options: [
@@ -879,15 +668,6 @@ const quizData = [
         explanation: "Client-side scripts manage forms and form fields.",
     },
     {
-        question:
-            "Which of the following is NOT required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application name"],
-        correct: [3],
-        explanation:
-            "Application name is not required to link a ServiceNow application to a Git repository.",
-    },
-    {
         question: "Which action can a business rule perform without using a script?",
         type: "single",
         options: [
@@ -899,26 +679,6 @@ const quizData = [
         correct: [1],
         explanation:
             "A business rule can set a field value and generate an event without using a script.",
-    },
-    {
-        question: "Which object is NOT accessible to a Display Business Rule?",
-        type: "single",
-        options: ["previous", "GlideSystem", "g_scratchpad", "current"],
-        correct: [0],
-        explanation: "The previous object is not accessible to a Display Business Rule.",
-    },
-    {
-        question:
-            "Which source control operation is available from both Studio and a Git repository?",
-        type: "single",
-        options: [
-            "Create Branch",
-            "Apply Remote Changes",
-            "Stash Local Changes",
-            "Edit Repository Configuration",
-        ],
-        correct: [0],
-        explanation: "Create Branch is available from both Studio and a Git repository.",
     },
     {
         question:
@@ -935,19 +695,6 @@ const quizData = [
             "g_form.showFieldMsg() is used to provide feedback for a specific field in a client script.",
     },
     {
-        question: "One use of the ServiceNow REST API Explorer is to:",
-        type: "single",
-        options: [
-            "Practice interacting with public data providers using REST",
-            "Find resources on the web to learn about REST",
-            "Convert SOAP message functions to REST methods",
-            "Create sample code for sending REST requests to ServiceNow",
-        ],
-        correct: [3],
-        explanation:
-            "The ServiceNow REST API Explorer is used to create sample code for sending REST requests to ServiceNow.",
-    },
-    {
         question:
             "Which of the following is correct about the Application Picker and application scope?",
         type: "single",
@@ -961,30 +708,10 @@ const quizData = [
         explanation:
             "Selecting an application from the Application Picker sets the application scope.",
     },
-    {
-        question: "Which of the following client-side scripts apply to a Record Producer?",
-        type: "single",
-        options: [
-            "Catalog Client Scripts and Catalog UI Policies",
-            "UI Scripts and UI Actions",
-            "UI Scripts and Record Producer Scripts",
-            "Client Scripts and UI Policies",
-        ],
-        correct: [0],
-        explanation: "Catalog Client Scripts and Catalog UI Policies apply to a Record Producer.",
-    },
 
 
 
     // CAD(20242_2)
-    {
-        question: "Which of the following is not an option for the Caller Access field?",
-        type: "single",
-        options: ["Caller Tracking", "Caller Restriction", "None", "Caller Permission"],
-        correct: [3],
-        explanation:
-            "The Caller Access field options are Caller Tracking, Caller Restriction, and None. Caller Permission is not a valid option.",
-    },
     {
         question: "Which of the following statements apply to the Form Designer?",
         type: "single",
@@ -1091,32 +818,6 @@ const quizData = [
             "In private scope applications, gs.log() is not used for logging; gs.error(), gs.warn(), and gs.debug() are preferred.",
     },
     {
-        question: "How many application menus can an application have?",
-        type: "single",
-        options: [
-            "Three: one for the application’s user modules, one for the application’s admin modules, and one for ServiceNow admin modules",
-            "As many as needed for the application’s design",
-            "Two: one for the application’s user modules and one for the application’s admin modules",
-            "One, which is used for all application modules",
-        ],
-        correct: [1],
-        explanation: "An application can have as many menus as required by its design.",
-    },
-    {
-        question:
-            "Access control debug information identifies whether each access control element granted or denied access. In which order are access control elements evaluated?",
-        type: "single",
-        options: [
-            "Conditions, Roles, Script",
-            "Conditions, Script, Roles",
-            "Roles, Conditions, Script",
-            "Script, Conditions, Roles",
-        ],
-        correct: [2],
-        explanation:
-            "Access control elements are evaluated in the order: Roles, Conditions, Script.",
-    },
-    {
         question: "What is a workflow context?",
         type: "single",
         options: [
@@ -1159,32 +860,6 @@ const quizData = [
         explanation: "ServiceNow uses watermarks in emails to match them to existing records.",
     },
     {
-        question: "One use of the ServiceNow REST API Explorer is:",
-        type: "single",
-        options: [
-            "To practice interacting with public data providers using REST",
-            "To find web resources for learning about REST",
-            "To convert SOAP message functions to REST methods",
-            "To generate sample code for sending REST requests to ServiceNow",
-        ],
-        correct: [3],
-        explanation: "The REST API Explorer generates sample code for REST requests to ServiceNow.",
-    },
-    {
-        question:
-            "Application developers can specify the ServiceNow page displayed to users after submitting a new record using a Record Producer UI. How is the page specified?",
-        type: "single",
-        options: [
-            'Write an after Business Rule script for the Record Producer’s table: window.redirect = "<URL>";',
-            "Create an application property to store the URL",
-            'Write a script in the Record Producer’s Script field: producer.redirect = "<URL>";',
-            "Configure the page in the Module that opens the Record Producer UI",
-        ],
-        correct: [2],
-        explanation:
-            'Application developers can specify the redirect page by writing a script in the Record Producer\'s Script field using producer.redirect = "<URL>".',
-    },
-    {
         question:
             "Which of the following applies to a Script Include with a protection policy value of Protected?",
         type: "single",
@@ -1206,13 +881,6 @@ const quizData = [
         correct: [0],
         explanation:
             "A Spoke is a scoped application with Flow Designer content for a specific application.",
-    },
-    {
-        question: "Which of the following is not a trigger type in Flow Designer?",
-        type: "single",
-        options: ["Outbound Email", "Application", "Record", "Schedule"],
-        correct: [0],
-        explanation: "Outbound Email is not a trigger type in Flow Designer.",
     },
     {
         question: "Modules require a link type. Which of the following is a list of link types?",
@@ -1242,13 +910,6 @@ const quizData = [
             "Selecting the Copy button on an application record is not a method for installing an application.",
     },
     {
-        question: "Which of the following is not part of the Form Designer?",
-        type: "single",
-        options: ["Form Layout", "Page Header", "Schema Map", "Field Navigator"],
-        correct: [2],
-        explanation: "Schema Map is not part of the Form Designer; it is a separate tool.",
-    },
-    {
         question:
             "What is the benefit of creating an application properties page for each application being developed?",
         type: "single",
@@ -1274,33 +935,6 @@ const quizData = [
         correct: [1],
         explanation:
             "ServiceNow is not suited for applications requiring low-level programming libraries used 'as-is'.",
-    },
-    {
-        question:
-            "Access control debug information indicates whether each access control element granted or denied access. In which order are access control elements evaluated?",
-        type: "single",
-        options: [
-            "Conditions, Script, Roles",
-            "Script, Conditions, Roles",
-            "Conditions, Roles, Script",
-            "Roles, Conditions, Script",
-        ],
-        correct: [3],
-        explanation:
-            "Access control elements are evaluated in the order: Roles, Conditions, Script.",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in the content frame or in a new tab or window",
-            "A group of menus or pages providing related information and functionality to end users",
-            "A method for users to quickly access information or services by filtering items in the Application Navigator",
-            "A web-based method for delivering software to end users",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a function within an application menu that opens pages or performs actions.",
     },
     {
         question: "Which statement about the Guided Application Creator is true?",
@@ -1329,18 +963,6 @@ const quizData = [
             "Sections are not added by dragging from the Field Types tab in Form Designer.",
     },
     {
-        question: "Which of the following is part of the client-side script API?",
-        type: "single",
-        options: [
-            "workflow.scratchpad",
-            "GlideUser object (g_user)",
-            "current and previous objects",
-            "GlideSystem object (gs)",
-        ],
-        correct: [1],
-        explanation: "The GlideUser object (g_user) is part of the client-side script API.",
-    },
-    {
         question:
             "Which of the following applies to a table with the [Allow configuration] application access option selected?",
         type: "single",
@@ -1353,15 +975,6 @@ const quizData = [
         correct: [2],
         explanation:
             "The [Allow configuration] option allows out-of-scope applications to create business rules.",
-    },
-    {
-        question:
-            "a. Replace outdated and inappropriate custom business applications and processes b. Extend service delivery and management to all enterprise departments c. Allow users full access to all ServiceNow tables, records, and fields d. Extend the value of ServiceNow",
-        type: "single",
-        options: ["a, b, c", "a, b, c, d", "b, c, d", "a, b, d"],
-        correct: [3],
-        explanation:
-            "ServiceNow’s value includes replacing outdated applications, extending services, and enhancing value, but not granting full access to all tables.",
     },
     {
         question: "Which of the following is true regarding application scope?",
@@ -1415,26 +1028,6 @@ const quizData = [
     },
     {
         question:
-            "When designing and creating a form, what do you create to organize the form’s fields?",
-        type: "single",
-        options: ["Related List", "Tab", "Section", "Button"],
-        correct: [2],
-        explanation: "Sections are used to organize fields on a form.",
-    },
-    {
-        question: "Which of the following is not supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Calling a subflow from a flow",
-            "Testing a flow using rollback",
-            "Using delegated developers",
-            "Running a flow from a MetricBase trigger",
-        ],
-        correct: [1],
-        explanation: "Flow Designer does not support testing flows using rollback.",
-    },
-    {
-        question:
             "Which method prints a message with a blue background at the top of the current form by default?",
         type: "single",
         options: [
@@ -1446,15 +1039,6 @@ const quizData = [
         correct: [1],
         explanation:
             "g_form.addInfoMessage() displays a blue background message at the top of the form.",
-    },
-    {
-        question:
-            "Which of the following is not required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application Name"],
-        correct: [3],
-        explanation:
-            "The application name is not required to link to a Git repository; username, URL, and password are needed.",
     },
     {
         question:
@@ -1522,26 +1106,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Extending a table inherits fields and functionality; behavior does not need to be fully scripted.",
-    },
-    {
-        question:
-            "When configuring an access control without conditions or scripts, which of the following statements is incorrect?",
-        type: "single",
-        options: [
-            "table.* grants access to all fields in a record.",
-            "table.None denies access to all records on the table.",
-            "table.field grants access to a specific field in a record.",
-            "table.id grants access to a specific record on the table.",
-        ],
-        correct: [3],
-        explanation: "table.id is not a valid syntax for granting access to a specific record.",
-    },
-    {
-        question: "Which types of scripts run on the server?",
-        type: "multiple",
-        options: ["Business Rule", "Client Script", "UI Policy", "Script Action", "Scheduled Job"],
-        correct: [0, 3, 4],
-        explanation: "Business Rules, Script Actions, and Scheduled Jobs run on the server.",
     },
     {
         question:
@@ -1654,19 +1218,6 @@ const quizData = [
             "The _query(), query(), and get() methods execute queries against a database table in GlideRecord. runQuery() and _get() are not standard GlideRecord methods for querying.",
     },
     {
-        question: "Which of the following is not a purpose of application scope?",
-        type: "single",
-        options: [
-            "Provide relationships between application artifacts",
-            "Provide a way to track the user who developed the application",
-            "Provide a namespace (prefix and scope name) to prevent collisions between application names",
-            "Control how scripts from another scope can modify the tables of a scoped application",
-        ],
-        correct: [1],
-        explanation:
-            "Application scope does not track the user who developed the application. It manages artifact relationships, namespaces, and cross-scope access control.",
-    },
-    {
         question: "Which of the following statements is not true about Form Designer?",
         type: "single",
         options: [
@@ -1740,34 +1291,6 @@ const quizData = [
     },
     {
         question:
-            "Which objects can be used in a Scheduled Script Execution (Scheduled Job) script?",
-        type: "single",
-        options: [
-            "GlideRecord and current",
-            "GlideUser and GlideRecord",
-            "GlideSystem and GlideRecord",
-            "GlideSystem and current",
-        ],
-        correct: [2],
-        explanation:
-            "Scheduled Scripts can use GlideSystem (gs) and GlideRecord objects to perform operations.",
-    },
-    {
-        question:
-            "Which of the following does not apply to the Weight field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight for the same record and recipient is sent.",
-            "A weight value of zero means no email will be sent.",
-            "The default weight value is zero.",
-            "A weight value of zero means the notification will always be sent when the criteria for sending are met.",
-        ],
-        correct: [1],
-        explanation:
-            "A weight of zero does not prevent email sending; it means the notification will be sent if criteria are met.",
-    },
-    {
-        question:
             "What is the benefit of extending an existing table, such as the Task table, when creating a new application?",
         type: "single",
         options: ["a, b, c, and d", "a and b", "b and c", "a, b, c"],
@@ -1800,26 +1323,6 @@ const quizData = [
         correct: [1],
         explanation:
             "The Date data type is for dates only; Date/Time is used for both dates and times.",
-    },
-    {
-        question: "How many application menus can an application have?",
-        type: "single",
-        options: [
-            "Three: one for the application’s user modules, one for the application’s admin modules, and one for ServiceNow admin modules.",
-            "As many as needed for the application’s design.",
-            "Two: one for the application’s user modules and one for the application’s admin modules.",
-            "One, which is used for all application modules.",
-        ],
-        correct: [1],
-        explanation: "An application can have as many menus as needed for its design.",
-    },
-    {
-        question:
-            "When creating a new application file in a scoped application, which of the following has cross-scope access enabled by default?",
-        type: "single",
-        options: ["REST Message", "Table", "Script Include", "Workflow"],
-        correct: [1],
-        explanation: "Tables have cross-scope access enabled by default in scoped applications.",
     },
     {
         question: "Which server-side API debugging log method can be used in a scoped application?",
@@ -1918,27 +1421,6 @@ const quizData = [
         ],
         correct: [2, 3],
         explanation: "The global application supports Automated Test Framework and Flow Designer.",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in the content frame or a separate tab or window.",
-            "A group of menus or pages providing related information and functionality to end users.",
-            "A method for users to quickly access information or services by filtering items in the Application Navigator.",
-            "A web-based method for providing software to end users.",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a specific function within an application menu, such as opening a page.",
-    },
-    {
-        question: "Which of the following cannot be debugged using Field Watcher?",
-        type: "single",
-        options: ["Business Rule", "Script Include", "Client Script", "Access Control"],
-        correct: [1],
-        explanation:
-            "Field Watcher cannot debug Script Includes, as it focuses on field-level changes.",
     },
     {
         question: "The graphical view of relationships between tables is a <blank>.",
@@ -2040,20 +1522,6 @@ const quizData = [
         explanation: "Business Rules can set field values and generate events without scripting.",
     },
     {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Sources",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "Transform Maps define field relationships between Import Set and ServiceNow tables.",
-    },
-    {
         question: "Identify the characteristics of a Record Producer.",
         type: "multiple",
         options: [
@@ -2082,29 +1550,6 @@ const quizData = [
     },
     {
         question:
-            "What syntax is used in a Record Producer script to access a value from a Record Producer form field?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variable_name",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "producer.variable_name is the syntax to access Record Producer form field values.",
-    },
-    {
-        question:
-            "a. Replace outdated and inappropriate custom business applications and processes. b. Extend service delivery and management to all enterprise departments. c. Allow users full access to all ServiceNow tables, records, and fields. d. Extend the value of ServiceNow.",
-        type: "single",
-        options: ["a, b, c", "a, b, c, d", "b, c, d", "a, b, d"],
-        correct: [3],
-        explanation:
-            "ServiceNow’s value is extended by replacing outdated apps, extending services, and enhancing platform use, but not by granting full access.",
-    },
-    {
-        question:
             "What is the benefit of creating an application properties page for each application being developed?",
         type: "single",
         options: [
@@ -2130,43 +1575,6 @@ const quizData = [
         explanation:
             "Creating a table from a template is not an option in Guided Application Creator.",
     },
-    {
-        question:
-            "When configuring an access control without conditions or scripts, which of the following statements is incorrect?",
-        type: "single",
-        options: [
-            "table.* grants access to all fields in a record.",
-            "table.None denies access to all records in the table.",
-            "table.field grants access to a specific field in a record.",
-            "table.id grants access to a specific record in the table.",
-        ],
-        correct: [3],
-        explanation: "table.id is not a valid syntax for granting access to a specific record.",
-    },
-    {
-        question: "When configuring a REST message, the endpoint is:",
-        type: "single",
-        options: [
-            "A command to the REST script to stop execution.",
-            "The URI of the data to be accessed, queried, or modified.",
-            "Information about the format of the returned data.",
-            "A response from the provider indicating no data to return.",
-        ],
-        correct: [1],
-        explanation: "The endpoint is the URI of the data to be accessed or modified.",
-    },
-    {
-        question: "Which of the following client-side scripts apply to a Record Producer?",
-        type: "single",
-        options: [
-            "Catalog Client Script and Catalog UI Policy",
-            "UI Script and UI Action",
-            "UI Script and Record Producer Script",
-            "Client Script and UI Policy",
-        ],
-        correct: [0],
-        explanation: "Catalog Client Scripts and Catalog UI Policies apply to Record Producers.",
-    },
 
 
 
@@ -2184,19 +1592,6 @@ const quizData = [
         correct: [2],
         explanation:
             "To review application artifacts, examine the application files related list for the published application, as it contains the relevant scripts, reports, and other artifacts. Reference: ServiceNow Application Publishing Documentation",
-    },
-    {
-        question: "What is the Event Registry?",
-        type: "single",
-        options: [
-            "A table containing records of all events recognized by the ServiceNow system, enabling ServiceNow to react when events are generated.",
-            "A workflow triggered each time an event is generated, used for debugging events.",
-            "A method used in server-side scripts to generate events and pass parameters.",
-            "An event log listing all generated events.",
-        ],
-        correct: [0],
-        explanation:
-            "The Event Registry is a table that stores records of all recognized events, allowing ServiceNow to respond to event triggers. Reference: ServiceNow Event Management Documentation",
     },
     {
         question:
@@ -2255,29 +1650,6 @@ const quizData = [
     },
     {
         question:
-            "When a ServiceNow instance requests information from a web service, ServiceNow is the:",
-        type: "single",
-        options: ["Publisher", "Specialist", "Provider", "Consumer"],
-        correct: [3],
-        explanation:
-            "ServiceNow acts as a consumer when requesting information from a web service, as it is the entity consuming the service. Reference: ServiceNow Web Services Documentation",
-    },
-    {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Sources",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "A Transform Map defines the field mappings between an Import Set table and a ServiceNow table for data import. Reference: ServiceNow Transform Map Documentation",
-    },
-    {
-        question:
             "Which method call returns true only if the currently logged-in user has the catalog_admin role and no other roles?",
         type: "single",
         options: [
@@ -2299,19 +1671,6 @@ const quizData = [
             "The 'previous' object is not available in Script Action scripts, as they are event-driven and do not track record changes like business rules. Reference: ServiceNow Script Action Documentation",
     },
     {
-        question: "Which of the following extend the value of ServiceNow?",
-        type: "multiple",
-        options: [
-            "Replace outdated and inappropriate custom business applications and processes.",
-            "Extend service delivery and management to all enterprise departments.",
-            "Allow users full access to all ServiceNow tables, records, and fields.",
-            "Extend the value of ServiceNow.",
-        ],
-        correct: [0, 1, 3],
-        explanation:
-            "Replacing outdated apps, extending services to departments, and enhancing ServiceNow’s value are key benefits. Full access to tables is not a goal. Reference: ServiceNow Platform Benefits",
-    },
-    {
         question: "What is the ServiceNow Store?",
         type: "single",
         options: [
@@ -2323,20 +1682,6 @@ const quizData = [
         correct: [1],
         explanation:
             "The ServiceNow Store is a marketplace for certified applications and integrations, both free and paid. Reference: ServiceNow Store Documentation",
-    },
-    {
-        question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole('admin') returns true if the user has the admin role, including inherited roles. Reference: ServiceNow GlideSystem API Documentation",
     },
     {
         question: "A module requires a link type. Which of the following are link types?",
@@ -2393,29 +1738,6 @@ const quizData = [
     },
     {
         question:
-            "In an email notification, which of the following does not apply to the Weight field?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight for the same record and recipient is sent.",
-            "A weight value of zero means the email will not be sent.",
-            "The default weight value is zero.",
-            "A weight value of zero means the notification is always sent when the notification’s conditions are met.",
-        ],
-        correct: [1],
-        explanation:
-            "A weight value of zero does not prevent sending; it means the notification is sent if conditions are met. Reference: ServiceNow Email Notification Documentation",
-    },
-    {
-        question:
-            "Which of the following methods is not used to log messages in server-side scripts for a private scope application?",
-        type: "single",
-        options: ["gs.log()", "gs.error()", "gs.warn()", "gs.debug()"],
-        correct: [0],
-        explanation:
-            "gs.log() is not used in private scope applications; gs.error(), gs.warn(), and gs.debug() are used for logging. Reference: ServiceNow Logging API Documentation",
-    },
-    {
-        question:
             "What is the benefit of creating an application properties page for each application being developed?",
         type: "single",
         options: [
@@ -2427,15 +1749,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Application properties enable behavior modification without altering artifacts, providing flexibility. Reference: ServiceNow Application Properties Documentation",
-    },
-    {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control? (Select two.)",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles grant access to source control operations like importing or linking applications. Reference: ServiceNow Source Control Documentation",
     },
     {
         question: "Which of the following is true regarding application scope?",
@@ -2482,19 +1795,6 @@ const quizData = [
             "Studio supports pushing to external source control and searching branches for development tasks. Reference: ServiceNow Studio Documentation",
     },
     {
-        question: "Which of the following client-side scripts apply to a record producer?",
-        type: "single",
-        options: [
-            "Catalog Client Scripts and Catalog UI Policies",
-            "UI Scripts and UI Actions",
-            "UI Scripts and Record Producer Scripts",
-            "Client Scripts and UI Policies",
-        ],
-        correct: [0],
-        explanation:
-            "Catalog Client Scripts and Catalog UI Policies are used for client-side scripting in record producers. Reference: ServiceNow Record Producer Documentation",
-    },
-    {
         question:
             "Assume a table named 'table' exists with three fields: field1, field2, and field3. Reviewing the table’s access control list: which fields can a user with the itil role read?",
         type: "single",
@@ -2502,41 +1802,6 @@ const quizData = [
         correct: [3],
         explanation:
             "The itil role can read all fields except field3, based on the access control list configuration. Reference: ServiceNow Access Control Documentation",
-    },
-    {
-        question: "How many application menus can an application have?",
-        type: "single",
-        options: [
-            "Three: one for application user modules, one for application admin modules, and one for ServiceNow admin modules.",
-            "As many as required by the application’s design.",
-            "Two: one for application user modules and one for application admin modules.",
-            "One, used for all application modules.",
-        ],
-        correct: [1],
-        explanation:
-            "An application can have as many menus as needed, based on its design requirements. Reference: ServiceNow Application Menu Documentation",
-    },
-    {
-        question:
-            "What is required to link a ServiceNow application to a Git repository? (Select three.)",
-        type: "multiple",
-        options: ["URI", "ACL", "Username", "URL", "Application name", "Password"],
-        correct: [2, 3, 5],
-        explanation:
-            "To link a ServiceNow application to a Git repository, you need the username, URL, and password of the Git account. Reference: ServiceNow Source Control Documentation",
-    },
-    {
-        question: "Which of the following is not a purpose of application scope?",
-        type: "single",
-        options: [
-            "Provides relationships between application artifacts.",
-            "Provides a way to track the user who developed the application.",
-            "Provides a namespace (prefix and scope name) to prevent name collisions between applications.",
-            "Controls how scripts from another scope can modify a scoped application’s tables.",
-        ],
-        correct: [1],
-        explanation:
-            "Application scope does not track the developer; it manages artifacts, namespaces, and access control. Reference: ServiceNow Application Scope Documentation",
     },
     {
         question: "How does ServiceNow match incoming emails to existing records?",
@@ -2574,20 +1839,6 @@ const quizData = [
         correct: [1],
         explanation:
             "The GlideUser object (g_user) is part of the client-side scripting API for user-related operations. Reference: ServiceNow Client-Side API Documentation",
-    },
-    {
-        question: "Which of the following are true about ServiceNow reports? (Select three.)",
-        type: "multiple",
-        options: [
-            "All users can view shared reports.",
-            "They can graphically represent data.",
-            "All users can generate reports on any table.",
-            "Authorized users can run them on demand.",
-            "They can be scheduled to run and distributed via email.",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "Reports can graphically represent data, be run on demand by authorized users, and be scheduled for email distribution. Reference: ServiceNow Reporting Documentation",
     },
     {
         question:
@@ -2700,20 +1951,6 @@ const quizData = [
     },
     {
         question:
-            "When configuring the content of an email notification, which syntax should be used to reference properties of the event that triggers the notification?",
-        type: "single",
-        options: [
-            "${event.<property_name>}",
-            "${current.<property_name>}",
-            "${<property_name>.getDisplayValue()}",
-            "${gs.<property_name>}",
-        ],
-        correct: [0],
-        explanation:
-            "${event.<property_name>} is used to reference event properties in email notifications. Reference: ServiceNow Email Notification Documentation",
-    },
-    {
-        question:
             "When the [Create Module] field is selected while creating a table, what is the default behavior of the new module?",
         type: "single",
         options: [
@@ -2727,51 +1964,6 @@ const quizData = [
             "The default behavior of a new module is to display a list of all records in the table. Reference: ServiceNow Table Module Documentation",
     },
     {
-        question:
-            "When configuring an access control without conditions or scripts, which of the following statements is incorrect?",
-        type: "single",
-        options: [
-            "table.* allows access to all fields in a record.",
-            "table.None denies access to all records in the table.",
-            "table.field allows access to a specific field in a record.",
-            "table.id allows access to a specific record in the table.",
-        ],
-        correct: [3],
-        explanation:
-            "table.id is not a valid access control syntax for specifying a single record. Reference: ServiceNow Access Control Documentation",
-    },
-    {
-        question: "What is the best UX format for use with lists and forms?",
-        type: "single",
-        options: ["Form", "List", "Standard", "Classic"],
-        correct: [3],
-        explanation:
-            "The Classic UX format is optimized for lists and forms in ServiceNow. Reference: ServiceNow UX Documentation",
-    },
-    {
-        question:
-            "When debugging email notifications, what should be checked in the user record? (Select two.)",
-        type: "multiple",
-        options: [
-            "The user must not be locked out.",
-            "Delegation must be enabled.",
-            "Active must be true.",
-            "The First Name and Last Name fields must have values.",
-            "The Email field must have a valid value.",
-        ],
-        correct: [2, 4],
-        explanation:
-            "For email notifications, the user must be active, and the Email field must have a valid value. Reference: ServiceNow Email Notification Debugging Documentation",
-    },
-    {
-        question: "Which of the following cannot be debugged using a field watcher?",
-        type: "single",
-        options: ["Business Rules", "Script Includes", "Client Scripts", "Access Controls"],
-        correct: [3],
-        explanation:
-            "Field watchers cannot debug access controls, as they focus on field-level changes, not security rules. Reference: ServiceNow Field Watcher Documentation",
-    },
-    {
         question: "Which of the following are configured in an email notification?",
         type: "multiple",
         options: [
@@ -2783,19 +1975,6 @@ const quizData = [
         correct: [0, 1, 2],
         explanation:
             "Email notifications configure the recipient, content, and timing, but not the delivery method. Reference: ServiceNow Email Notification Documentation",
-    },
-    {
-        question: "Which objects can be used in an inbound action script?",
-        type: "single",
-        options: [
-            "current and previous",
-            "current and email",
-            "current and event",
-            "current and producer",
-        ],
-        correct: [1],
-        explanation:
-            "Inbound action scripts use the 'current' and 'email' objects to process incoming emails. Reference: ServiceNow Inbound Email Action Documentation",
     },
     {
         question:
@@ -2826,29 +2005,6 @@ const quizData = [
             "Events generated by gs.eventQueue() can trigger Script Actions and Email Notifications. Reference: ServiceNow Event Handling Documentation",
     },
     {
-        question:
-            "The source control operation used to save local changes to an instance for later application is called a(n):",
-        type: "single",
-        options: ["Branch", "Tag", "Stash", "Update Set"],
-        correct: [0],
-        explanation:
-            "A Branch is used to save local changes in source control for later application. Reference: ServiceNow Source Control Documentation",
-    },
-    {
-        question:
-            "Application developers can specify the ServiceNow page displayed to a user after submitting a new record using a Record Producer UI. How is the page specified?",
-        type: "single",
-        options: [
-            "Write an after Business Rule script for the Record Producer’s table: window.redirect = '<URL>';",
-            "Create an application property to store the URL.",
-            "Write a script in the Record Producer’s Script field: producer.redirect = '<URL>';",
-            "Configure the page in the Module that opens the Record Producer UI.",
-        ],
-        correct: [2],
-        explanation:
-            "Application developers can specify the redirect page by writing a script in the Record Producer's Script field using producer.redirect = '<URL>'. Reference: ServiceNow Record Producer Documentation",
-    },
-    {
         question: "What is the purpose of the",
         type: "single",
         options: [
@@ -2860,15 +2016,6 @@ const quizData = [
         correct: [2],
         explanation:
             "The Application Picker is used to select the application to edit and set the application scope for development. Reference: ServiceNow Application Picker Documentation",
-    },
-    {
-        question:
-            "Which of the following is not required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application name"],
-        correct: [3],
-        explanation:
-            "The application name is not required to link a ServiceNow application to a Git repository; username, URL, and password are needed. Reference: ServiceNow Source Control Documentation",
     },
     {
         question:
@@ -2886,20 +2033,6 @@ const quizData = [
             "Access control requires true conditions, a required role, and a true script evaluation. Reference: ServiceNow Access Control Documentation",
     },
     {
-        question:
-            "Which objects can be used in a Scheduled Script Execution (Scheduled Job) script?",
-        type: "single",
-        options: [
-            "GlideRecord and current",
-            "GlideUser and GlideRecord",
-            "GlideSystem and GlideRecord",
-            "GlideSystem and current",
-        ],
-        correct: [2],
-        explanation:
-            "Scheduled Script Execution scripts can use GlideSystem and GlideRecord objects. Reference: ServiceNow Scheduled Script Execution Documentation",
-    },
-    {
         question: "Identify the characteristics of a Record Producer. (Select three.)",
         type: "multiple",
         options: [
@@ -2912,33 +2045,6 @@ const quizData = [
         correct: [0, 2, 4],
         explanation:
             "Record Producers can include graphics, script field behavior, and use questions instead of labels. Reference: ServiceNow Record Producer Documentation",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in the content frame or a separate tab or window.",
-            "A group of menus or pages providing related information and functionality to end users.",
-            "A way for users to quickly access information or services by filtering items in the Application Navigator.",
-            "A web-based method of providing software to end users.",
-        ],
-        correct: [2],
-        explanation:
-            "A module filters items in the Application Navigator for quick access to information or services. Reference: ServiceNow Module Documentation",
-    },
-    {
-        question:
-            "What syntax is used in a Record Producer script to access values from Record Producer form fields?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variable_name",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "producer.variable_name is used to access form field values in a Record Producer script. Reference: ServiceNow Record Producer Script Documentation",
     },
     {
         question: "What does a table that extends another table do?",
@@ -2979,33 +2085,6 @@ const quizData = [
             "The correct answer is based on ServiceNow scoped application debugging methods. Reference: ServiceNow Documentation on Server-Side APIs",
     },
     {
-        question: "When evaluating access controls, ServiceNow searches and evaluates:",
-        type: "single",
-        options: [
-            "Matches for the current table only",
-            "Matches for the current field only",
-            "From the most specific match to the most general match",
-            "From the most general match to the most specific match",
-        ],
-        correct: [2],
-        explanation:
-            "Access control evaluation follows ServiceNow’s rule processing logic. Reference: ServiceNow Documentation on Access Controls",
-    },
-    {
-        question: "When debugging email notifications, what should you check in the user record?",
-        type: "multiple",
-        options: [
-            "The user must not be locked out",
-            "Delegation must be enabled",
-            "Active must be true",
-            "The first name and last name fields must have values",
-            "The email field must have a valid value",
-        ],
-        correct: [2, 4],
-        explanation:
-            "User record settings impact email notifications. Reference: ServiceNow Documentation on Email Notifications",
-    },
-    {
         question: "Which of the following is part of the client-side scripting API?",
         type: "single",
         options: [
@@ -3019,35 +2098,12 @@ const quizData = [
             "Client-side APIs are specific to ServiceNow’s scripting environment. Reference: ServiceNow Documentation on Client-Side APIs",
     },
     {
-        question:
-            "Which of the following is not required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application name"],
-        correct: [3],
-        explanation:
-            "Git repository linking requires specific credentials. Reference: ServiceNow Documentation on Source Control Integration",
-    },
-    {
         question: "Which of the following are configured in email notifications?",
         type: "single",
         options: ["a, b, c", "a, b, and d", "b, c, d", "a, c, d"],
         correct: [0],
         explanation:
             "Email notification configuration includes multiple aspects. Reference: ServiceNow Documentation on Email Notifications",
-    },
-    {
-        question:
-            "Which source control operation is available from both Studio and a Git repository?",
-        type: "single",
-        options: [
-            "Create a branch",
-            "Apply remote changes",
-            "Stash local changes",
-            "Edit repository configuration",
-        ],
-        correct: [0],
-        explanation:
-            "Source control operations vary by platform. Reference: ServiceNow Documentation on Studio and Git Integration",
     },
     {
         question: "How does ServiceNow match inbound emails to existing records?",
@@ -3070,27 +2126,6 @@ const quizData = [
         correct: [1, 3, 4],
         explanation:
             "Reporting features are defined in ServiceNow. Reference: ServiceNow Documentation on Reporting",
-    },
-    {
-        question: "What is the baseline behavior of a table in a private scope application?",
-        type: "single",
-        options: [
-            "The table and its data cannot be accessed using web services",
-            "All business rules can read, write, delete, and update from the table",
-            "Only artifacts within the table’s application can read from the table",
-            "All application scopes can read from the table",
-        ],
-        correct: [3],
-        explanation:
-            "Private scope table behavior is defined by ServiceNow. Reference: ServiceNow Documentation on Application Scoping",
-    },
-    {
-        question: "Which of the following cannot be debugged using a field watcher?",
-        type: "single",
-        options: ["Business rules", "Script includes", "Client scripts", "Access controls"],
-        correct: [3],
-        explanation:
-            "Field watcher limitations are outlined in ServiceNow. Reference: ServiceNow Documentation on Debugging",
     },
     {
         question: "Identify characteristics of a record producer",
@@ -3153,20 +2188,6 @@ const quizData = [
     },
     {
         question:
-            "What syntax is used in a record producer script to access values from record producer form fields?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variablename",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "Record producer scripts use specific syntax. Reference: ServiceNow Documentation on Record Producers",
-    },
-    {
-        question:
             "Which data types are supported for Flow Designer variables to store record data and complex data?",
         type: "multiple",
         options: ["Label data type", "Integer", "Array.Reference", "Choice", "String"],
@@ -3185,39 +2206,12 @@ const quizData = [
     },
     {
         question:
-            "Which of the following does not apply to the weight field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight for the same record and recipient is sent",
-            "A weight value of zero means the email is not sent",
-            "The default weight value is zero",
-            "A weight value of zero means the notification is always sent when the notification’s sending criteria are met",
-        ],
-        correct: [1],
-        explanation:
-            "Email notification weights determine priority. Reference: ServiceNow Documentation on Email Notifications",
-    },
-    {
-        question:
             "When working in Form Designer, setting the label of a field on a child table changes the label on which table?",
         type: "single",
         options: ["Base table", "Child table", "Parent table", "All tables"],
         correct: [1],
         explanation:
             "Form Designer label changes are specific to tables. Reference: ServiceNow Documentation on Form Designer",
-    },
-    {
-        question: "Which of the following is not supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Calling a subflow from a flow",
-            "Testing a flow using rollback",
-            "Using delegated developers",
-            "Running a flow from a MetricBase trigger",
-        ],
-        correct: [1],
-        explanation:
-            "Flow Designer has specific limitations. Reference: ServiceNow Documentation on Flow Designer",
     },
     {
         question:
@@ -3232,14 +2226,6 @@ const quizData = [
         correct: [1],
         explanation:
             "SOAP message syntax is specific to ServiceNow. Reference: ServiceNow Documentation on SOAP Messages",
-    },
-    {
-        question: "What is the best UX format for use with lists and forms?",
-        type: "single",
-        options: ["Form", "List", "Standard", "Classic"],
-        correct: [3],
-        explanation:
-            "UX formats impact user experience. Reference: ServiceNow Documentation on UI Formats",
     },
     {
         question: "What is the REST API Explorer used for?",
@@ -3311,33 +2297,6 @@ const quizData = [
     },
     {
         question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business service management map",
-            "Data source",
-            "Transform map",
-            "CI relationship builder",
-        ],
-        correct: [2],
-        explanation:
-            "Field relationships are managed via transform maps. Reference: ServiceNow Documentation on Import Sets",
-    },
-    {
-        question: "How many application menus can an application have?",
-        type: "single",
-        options: [
-            "Three: one for the application’s user modules, one for the application’s admin modules, and one for ServiceNow admin modules",
-            "One, which is used for all application modules",
-            "Two: one for the application’s user modules and one for the application’s admin modules",
-            "As many as needed for the application’s design",
-        ],
-        correct: [3],
-        explanation:
-            "Application menus are flexible in ServiceNow. Reference: ServiceNow Documentation on Application Menus",
-    },
-    {
-        question:
             "Which of the following GlideRecord methods execute a query against a database table?",
         type: "multiple",
         options: ["_query()", "runQuery()", "query()", "_get()", "get()"],
@@ -3368,19 +2327,6 @@ const quizData = [
             "ServiceNow’s value is extended through specific actions. Reference: ServiceNow Documentation on Platform Value",
     },
     {
-        question: "What is the baseline behavior of a table in a private scope application?",
-        type: "single",
-        options: [
-            "Any business rule can read, write, delete, and update from the table",
-            "Only artifacts within the table’s application can read from the table",
-            "All application scopes can read from the table",
-            "The table and its data cannot be accessed using web services",
-        ],
-        correct: [2],
-        explanation:
-            "Private scope table behavior is defined by ServiceNow. Reference: ServiceNow Documentation on Application Scoping",
-    },
-    {
         question: "What is the ServiceNow Store?",
         type: "single",
         options: [
@@ -3392,27 +2338,6 @@ const quizData = [
         correct: [1],
         explanation:
             "The ServiceNow Store is a specific platform feature. Reference: ServiceNow Documentation on ServiceNow Store",
-    },
-    {
-        question: "Which object is not accessible to a display business rule?",
-        type: "single",
-        options: ["previous", "GlideSystem", "g_scratchpad", "current"],
-        correct: [0],
-        explanation:
-            "Display business rules have specific object access. Reference: ServiceNow Documentation on Business Rules",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in the content frame or a separate tab or window",
-            "A group of menus or pages providing related information and functionality to end users",
-            "A method for users to quickly access information or services by filtering items in the Application Navigator",
-            "A web-based method for providing software to end users",
-        ],
-        correct: [2],
-        explanation:
-            "Modules are defined components in ServiceNow. Reference: ServiceNow Documentation on Modules",
     },
     {
         question: "What is a workflow context?",
@@ -3510,14 +2435,6 @@ const quizData = [
             "JavaScript is used for customization. Reference: ServiceNow Documentation on Scripting",
     },
     {
-        question: "Which of the following is not part of the Form Designer?",
-        type: "single",
-        options: ["Form layout", "Page header", "Schema map", "Field navigator"],
-        correct: [2],
-        explanation:
-            "Form Designer includes specific components. Reference: ServiceNow Documentation on Form Designer",
-    },
-    {
         question: "Which features are available in Studio?",
         type: "multiple",
         options: [
@@ -3580,27 +2497,6 @@ const quizData = [
             "Client-side scripts control UI elements. Reference: ServiceNow Documentation on Client-Side Scripting",
     },
     {
-        question: "Which of the following is not an option for the Caller Access field?",
-        type: "single",
-        options: ["Caller Tracking", "Caller Restriction", "None", "Caller Permission"],
-        correct: [3],
-        explanation:
-            "Caller Access field options are specific. Reference: ServiceNow Documentation on Table Configuration",
-    },
-    {
-        question: "Which of the following client-side scripts apply to a record producer?",
-        type: "single",
-        options: [
-            "Catalog client scripts and catalog UI policies",
-            "UI scripts and UI actions",
-            "UI scripts and record producer scripts",
-            "Client scripts and UI policies",
-        ],
-        correct: [0],
-        explanation:
-            "Record producers use specific client-side scripts. Reference: ServiceNow Documentation on Record Producers",
-    },
-    {
         question: "Which of the following objects cannot be used in a script action script?",
         type: "single",
         options: ["previous", "GlideRecord", "event", "current"],
@@ -3620,19 +2516,6 @@ const quizData = [
         correct: [2],
         explanation:
             "Module link types are specific. Reference: ServiceNow Documentation on Modules",
-    },
-    {
-        question: "What is the event registry?",
-        type: "single",
-        options: [
-            "A table containing records of all events recognized by the ServiceNow system, enabling ServiceNow to react when events are generated",
-            "A workflow triggered every time an event is generated, used for debugging events",
-            "A method used in server-side scripts to generate events and pass parameters",
-            "An event log listing all generated events",
-        ],
-        correct: [0],
-        explanation:
-            "The event registry manages system events. Reference: ServiceNow Documentation on Event Management",
     },
     {
         question:
@@ -3930,29 +2813,6 @@ const quizData = [
             "A business rule can set field values and generate an event without requiring a script.",
     },
     {
-        question:
-            "The source control operation used to save local changes to an instance for later application is called a(n) <blank>.",
-        type: "single",
-        options: ["Branch", "Tag", "Stash", "Update Set"],
-        correct: [2],
-        explanation:
-            "The stash operation saves local changes to an instance for later application.",
-    },
-    {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Sources",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "A Transform Map determines the relationship between fields in an Import Set table and an existing ServiceNow table.",
-    },
-    {
         question: "What is the appropriate way to add instructions to a form?",
         type: "single",
         options: [
@@ -3971,33 +2831,6 @@ const quizData = [
         correct: [0],
         explanation:
             "Email notifications configure who receives the notification, what is included, and when it is sent.",
-    },
-    {
-        question:
-            "When configuring the content of an email notification, which syntax should be used to reference properties of the event that triggered the notification?",
-        type: "single",
-        options: [
-            "${event.<property_name>}",
-            "${current.<property_name>}",
-            "${<property_name>.getDisplayValue()}",
-            "${gs.<property_name>}",
-        ],
-        correct: [0],
-        explanation:
-            "The ${event.<property_name>} syntax is used to reference event properties in email notifications.",
-    },
-    {
-        question:
-            "Which source control operation is available from both Studio and a Git repository?",
-        type: "single",
-        options: [
-            "Create a branch",
-            "Apply remote changes",
-            "Stash local changes",
-            "Edit repository configurations",
-        ],
-        correct: [0],
-        explanation: "Creating a branch is available in both Studio and a Git repository.",
     },
     {
         question:
@@ -4051,15 +2884,6 @@ const quizData = [
         correct: [3],
         explanation:
             "A Transform Map determines the field relationships between an Import Set table and an existing ServiceNow table.",
-    },
-    {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control?",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles allow access to source control repository operations.",
     },
     {
         question:
@@ -4118,33 +2942,6 @@ const quizData = [
         correct: [0],
         explanation:
             "The com.glide.sn-guided-app-creator plugin enables the Guided Application Creator.",
-    },
-    {
-        question: "Which of the following is true about application scope?",
-        type: "single",
-        options: [
-            "All applications automatically become part of the global scope",
-            "Applications downloaded from third-party ServiceNow application developers cannot cause name conflicts",
-            "All developers can edit any application",
-            "Developers can choose the namespace prefix for the scope",
-        ],
-        correct: [1],
-        explanation:
-            "Third-party applications downloaded from ServiceNow developers are designed to avoid name conflicts.",
-    },
-    {
-        question: "Which of the following are true about ServiceNow reports?",
-        type: "multiple",
-        options: [
-            "All users can view shared reports",
-            "They can graphically represent data",
-            "All users can generate reports on any table",
-            "Authorized users can run them on demand",
-            "They can be scheduled to run and distributed via email",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "ServiceNow reports can graphically represent data, be run on demand by authorized users, and be scheduled for email distribution.",
     },
     {
         question: "Which roles are required to impersonate a user?",
@@ -4254,33 +3051,6 @@ const quizData = [
         explanation: "Query operations cannot be controlled by Application Access.",
     },
     {
-        question:
-            "When creating a Utils Script Include, there are basic strategies. Identify the step that does not belong.",
-        type: "single",
-        options: [
-            "Identify the table",
-            "Script the function",
-            "Create a class",
-            "Create a prototype object from the new class",
-        ],
-        correct: [0],
-        explanation: "Identifying the table is not a step in creating a Utils Script Include.",
-    },
-    {
-        question:
-            "You are developing a MyApp application with a table, Table A. When installing the MyApp application to an instance, records from Table A need to be installed as part of the application. Table A records are installed when:",
-        type: "single",
-        options: [
-            "Table A is active and extends the Task table",
-            "Table A records are added to the application record using the [Create Application File] context menu item",
-            "Table A has an auto-number counter for new records",
-            "Table A is not included in the [System Clone] > [Tables to Exclude] list",
-        ],
-        correct: [1],
-        explanation:
-            "Table A records are installed when added to the application record via the [Create Application File] context menu.",
-    },
-    {
         question: "Name three ways to create a table in ServiceNow.",
         type: "multiple",
         options: [
@@ -4312,49 +3082,11 @@ const quizData = [
             "Commonly used core actions in Flow Designer include Look Up Record, Wait for Condition, Ask for Approval, and Create Record.",
     },
     {
-        question: "Which of the following is correct?",
-        type: "single",
-        options: [
-            "UI Policy actions are executed before UI Policy scripts",
-            "The execution order of UI Policy scripts and actions is determined at runtime",
-            "UI Policy scripts are executed before UI Policy actions",
-            "UI Policy actions and scripts are executed simultaneously",
-        ],
-        correct: [0],
-        explanation: "UI Policy actions are executed before UI Policy scripts.",
-    },
-    {
-        question:
-            "For Application Access, there is a configuration option to [Allow access to this table via web services]. When this option is selected, which of the following statements is true?",
-        type: "single",
-        options: [
-            "This option restricts the ability to delete records via web services but allows reading records at any time",
-            "Users running queries via web services must have the appropriate permissions to access the table’s records",
-            "Even if not selected, users with appropriate permissions can access table records using web services",
-            "This option restricts access to SOAP web services only, not REST",
-        ],
-        correct: [3],
-        explanation: "The option restricts access to SOAP web services only, not REST.",
-    },
-    {
         question: "What is the best UX format for use with lists and forms?",
         type: "single",
         options: ["Forms", "Lists", "Standard", "Classic"],
         correct: [3],
         explanation: "The Classic UX format is best for lists and forms.",
-    },
-    {
-        question: "What is the Event Registry?",
-        type: "single",
-        options: [
-            "A table containing records of all events recognized by the ServiceNow system, enabling ServiceNow to react when events are generated",
-            "A workflow triggered each time an event is generated, used for debugging events",
-            "A method used in server-side scripts to generate events and pass parameters",
-            "An event log listing all generated events",
-        ],
-        correct: [0],
-        explanation:
-            "The Event Registry is a table containing records of all recognized events in ServiceNow.",
     },
     {
         question:
@@ -4397,19 +3129,6 @@ const quizData = [
             "Tags are added by clicking the More Options (...) icon, selecting Add Tag, and typing the tag name.",
     },
     {
-        question: "When evaluating access controls, ServiceNow searches and evaluates:",
-        type: "single",
-        options: [
-            "Matches on the current table only",
-            "Matches on the current field only",
-            "From the most specific match to the most generic match",
-            "From the most generic match to the most specific match",
-        ],
-        correct: [2],
-        explanation:
-            "ServiceNow evaluates access controls from the most specific to the most generic match.",
-    },
-    {
         question: "What is the name of the string that displays filter conditions?",
         type: "single",
         options: ["Menu", "Selection", "Topic", "Breadcrumb"],
@@ -4441,19 +3160,6 @@ const quizData = [
         correct: [1],
         explanation:
             "Reviewing update sets for the instance allows inspection of application artifacts.",
-    },
-    {
-        question: "Which statement does not apply when extending an existing table?",
-        type: "single",
-        options: [
-            "Access controls from the parent table are evaluated when determining access to records and fields in the new table",
-            "The new table inherits functionality built into the parent table",
-            "The new table inherits all fields from the parent table",
-            "All required behavior must be scripted and configured",
-        ],
-        correct: [3],
-        explanation:
-            "Not all behavior must be scripted when extending a table, as functionality is inherited.",
     },
     {
         question:
@@ -4502,13 +3208,6 @@ const quizData = [
         correct: [0, 1, 3, 4],
         explanation:
             "Create, Delete, Read, and Write access controls are automatically created for a custom table.",
-    },
-    {
-        question: "Which of the following is not an option for the Caller Access field?",
-        type: "single",
-        options: ["Caller Tracking", "Caller Restriction", "None", "Caller Permission"],
-        correct: [3],
-        explanation: "Caller Permission is not an option for the Caller Access field.",
     },
     {
         question:
@@ -4569,18 +3268,6 @@ const quizData = [
         correct: [3],
         explanation:
             "The Configure > Table path in the form context menu accesses the table configuration page.",
-    },
-    {
-        question: "What is the ServiceNow App Repository?",
-        type: "single",
-        options: [
-            "Request Table",
-            "Alias for Update Sets",
-            "Database containing ServiceNow apps",
-            "Collection of files in a Git database",
-        ],
-        correct: [2],
-        explanation: "The ServiceNow App Repository is a database containing ServiceNow apps.",
     },
     {
         question:
@@ -4651,14 +3338,6 @@ const quizData = [
             "The ServiceNow REST API includes methods like POST, GET, and DELETE, but COPY is not a valid method. Reference: ServiceNow REST API documentation",
     },
     {
-        question: "Which of the following is not a trigger type in Flow Designer?",
-        type: "single",
-        options: ["Application", "Record", "Schedule", "Outbound Email"],
-        correct: [3],
-        explanation:
-            "Flow Designer supports triggers like Application, Record, and Schedule, but Outbound Email is not a trigger type. Reference: Flow Designer documentation",
-    },
-    {
         question: "How many application menus does an application have?",
         type: "single",
         options: [
@@ -4723,33 +3402,6 @@ const quizData = [
         correct: [1, 2, 4],
         explanation:
             "Flow Designer supports Integer, Array.Reference, and String for record and complex data. Reference: Flow Designer variable types",
-    },
-    {
-        question: "Which of the following methods are useful in access control scripts?",
-        type: "single",
-        options: [
-            "g_user.hasRole() and current.isNewRecord()",
-            "gs.hasRole() and current.isNewRecord()",
-            "g_user.hasRole() and current.isNew()",
-            "gs.hasRole() and current.isNew()",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole() and current.isNewRecord() are used in access control scripts. Reference: Access control script methods",
-    },
-    {
-        question:
-            "Application developers can specify the ServiceNow page displayed to users after submitting a new record using the Record Producer UI. How is the page specified?",
-        type: "single",
-        options: [
-            'Create a script in a Business Rule after the Record Producer’s table: window.redirect = "<URL>";',
-            "Create an application property to store the URL.",
-            'Write a script in the [Record Producer Script] field: producer.redirect = "<URL>";',
-            "Set the page in the module that opens the Record Producer UI.",
-        ],
-        correct: [1],
-        explanation:
-            "An application property is used to store the redirect URL for a Record Producer. Reference: Record Producer redirect configuration",
     },
     {
         question:
@@ -4819,23 +3471,6 @@ const quizData = [
             "Non-admins cannot develop global applications. Reference: Delegated development documentation",
     },
     {
-        question: "Which of the following cannot be debugged using a Field Watcher?",
-        type: "single",
-        options: ["Business Rules", "Script Includes", "Client Scripts", "Access Controls"],
-        correct: [1],
-        explanation:
-            "Field Watcher cannot debug Script Includes. Reference: Field Watcher documentation",
-    },
-    {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control?",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles allow source control operations. Reference: Source control roles",
-    },
-    {
         question: "What happens when an existing table is extended in ServiceNow?",
         type: "single",
         options: [
@@ -4847,20 +3482,6 @@ const quizData = [
         correct: [0],
         explanation:
             "Extended tables inherit parent table functionality. Reference: Table extension documentation",
-    },
-    {
-        question: "When debugging email notifications, what should be checked in the user record?",
-        type: "multiple",
-        options: [
-            "The user must not be locked out.",
-            "Delegation must be enabled.",
-            "Active must be true.",
-            "The First Name and Last Name fields must have values.",
-            "The Email field must have a valid value.",
-        ],
-        correct: [2, 4],
-        explanation:
-            "Active must be true and the Email field must have a valid value for email notifications. Reference: Email notification debugging",
     },
     {
         question: "What is the REST API Explorer used for?",
@@ -5015,18 +3636,6 @@ const quizData = [
         explanation: "Select URL (from arguments:) to open a Record Producer UI from a module.",
     },
     {
-        question: "How many application menus can an application have?",
-        type: "single",
-        options: [
-            "3: one for the application's user module, one for the administrator module, and one for the ServiceNow administrator module",
-            "1, used for all application modules",
-            "2: one for the application's user module and one for the administrator module",
-            "As many as needed based on application design",
-        ],
-        correct: [3],
-        explanation: "An application can have as many menus as needed based on its design.",
-    },
-    {
         question:
             "Which database operations can be controlled by Application Access? (Select 2 answers)",
         type: "multiple",
@@ -5134,14 +3743,6 @@ const quizData = [
             "You cannot drag a section from the Field Types tab; sections are created differently.",
     },
     {
-        question:
-            "When creating a scoped application that includes flow actions, what is the application called?",
-        type: "single",
-        options: ["Action", "Spoke", "Flow", "Bundle"],
-        correct: [1],
-        explanation: "Applications that include flow actions are called Spokes.",
-    },
-    {
         question: "Which of the following does not apply to modules?",
         type: "single",
         options: [
@@ -5189,14 +3790,6 @@ const quizData = [
             "The Application Files Related List in the application record lists all artifacts (scripts, reports, etc.) included in the application. Reference: ServiceNow Application Management.",
     },
     {
-        question: "Which of the following is not a client-side script debugging strategy?",
-        type: "single",
-        options: ["g_form.addInfoMessage()", "Field Watcher", "jslog()", "gs.log()"],
-        correct: [3],
-        explanation:
-            "gs.log() is a server-side debugging method. Client-side debugging uses g_form.addInfoMessage(), Field Watcher, and jslog(). Reference: ServiceNow Client-Side Scripting.",
-    },
-    {
         question:
             "Which application access configuration field is unavailable if the 'Readable' setting field is not selected?",
         type: "single",
@@ -5209,37 +3802,6 @@ const quizData = [
         correct: [1],
         explanation:
             "If 'Readable' is not selected, the 'Can create, update, delete' option is disabled as it depends on read access. Reference: ServiceNow Application Access Configuration.",
-    },
-    {
-        question: "Which of the following is not a trigger type in Flow Designer?",
-        type: "single",
-        options: ["Outbound Email", "Application", "Record", "Schedule"],
-        correct: [0],
-        explanation:
-            "Flow Designer supports Application, Record, and Schedule triggers. Outbound Email is not a trigger type. Reference: ServiceNow Flow Designer documentation.",
-    },
-    {
-        question:
-            "When creating a new application file in a scoped application, which of the following has cross-scope access enabled by default?",
-        type: "single",
-        options: ["REST Message", "Table", "Script Include", "Workflow"],
-        correct: [1],
-        explanation:
-            "Tables in scoped applications have cross-scope access enabled by default to allow data sharing, unless restricted. Reference: ServiceNow Scoped Application Access.",
-    },
-    {
-        question:
-            "Which of the following is an incorrect statement about the 'Weight' field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest Weight is sent for the same record and recipient.",
-            "If the Weight value is 0, the email is not sent.",
-            "The Weight value is 0 by default.",
-            "If the Weight value is 0, the notification is always sent when the sending condition is met.",
-        ],
-        correct: [1],
-        explanation:
-            "A Weight value of 0 does not prevent sending; notifications with Weight 0 are sent if conditions are met. Reference: ServiceNow Email Notification Weight.",
     },
     {
         question: "Which object is inaccessible to a Display Business Rule?",
@@ -5364,29 +3926,6 @@ const quizData = [
     },
     {
         question:
-            "Which roles allow access to source control repository operations (importing an application from source control or linking an application to source control)? (Select two)",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles grant access to source control operations. Reference: ServiceNow Source Control documentation.",
-    },
-    {
-        question:
-            "When configuring the content of an email notification, which syntax is used to reference the properties of the event that triggers the notification?",
-        type: "single",
-        options: [
-            "${event.<property name>}",
-            "${current.<property name>}",
-            "${<property name>.getDisplayValue()}",
-            "${gs.<property name>}",
-        ],
-        correct: [0],
-        explanation:
-            "${event.<property name>} is used to reference event properties in notifications. Reference: ServiceNow Notification Syntax.",
-    },
-    {
-        question:
             "Which of the following is a correct statement about a Script Include with a Protection Policy value set to 'Protected'?",
         type: "single",
         options: [
@@ -5413,46 +3952,6 @@ const quizData = [
             "GlideUser (g_user) is used in client-side scripts like client scripts, UI policies, and UI actions. Reference: ServiceNow GlideUser API.",
     },
     {
-        question:
-            "When configuring a module, what does the 'Override Application Menu Roles' configuration option do?",
-        type: "single",
-        options: [
-            "Allows users with the module role but no access to the application menu to access the module.",
-            "Allows self-service users to access the module without a role.",
-            "Allows admins to access the module even when access is normally restricted.",
-            "Allows users with access to the application menu to view the module without the module role.",
-        ],
-        correct: [0],
-        explanation:
-            "Override Application Menu Roles allows module access for users with the module role, bypassing menu restrictions. Reference: ServiceNow Module Configuration.",
-    },
-    {
-        question:
-            "Which platform feature is used to determine the relationship between fields in an import set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Source",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "Transform Maps define field mappings for data imports. Reference: ServiceNow Import Sets.",
-    },
-    {
-        question: "When configuring a REST message, what is an endpoint?",
-        type: "single",
-        options: [
-            "A command to stop the execution of a REST script.",
-            "The URI of the data to be accessed, queried, or modified.",
-            "Information about the format of the returned data.",
-        ],
-        correct: [1],
-        explanation:
-            "An endpoint is the URI for accessing or modifying data in a REST message. Reference: ServiceNow REST Message Configuration.",
-    },
-    {
         question: "When evaluating access controls, how does ServiceNow search and evaluate them?",
         type: "single",
         options: [
@@ -5464,20 +3963,6 @@ const quizData = [
         correct: [2],
         explanation:
             "ServiceNow evaluates access controls from most specific to most general. Reference: ServiceNow Access Control Evaluation.",
-    },
-    {
-        question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole('admin') checks if the user has the admin role, including inherited roles. Reference: ServiceNow GlideSystem API.",
     },
     {
         question:
@@ -5547,19 +4032,6 @@ const quizData = [
             "Private scope tables restrict read access to their own application’s artifacts by default. Reference: ServiceNow Scoped Application Tables.",
     },
     {
-        question: "Which of the following is not a purpose of Application Scope?",
-        type: "single",
-        options: [
-            "Providing relationships between application artifacts.",
-            "Providing a way to track the user who developed the application.",
-            "Providing a namespace (prefix and scope name) to prevent name conflicts between applications.",
-            "Controlling how scripts from another scope can modify tables in the scoped application.",
-        ],
-        correct: [1],
-        explanation:
-            "Application Scope does not track developers; it manages artifacts, namespaces, and access. Reference: ServiceNow Application Scope.",
-    },
-    {
         question:
             "As part of application development planning, which of the following should be documented as part of the business process?",
         type: "single",
@@ -5572,40 +4044,6 @@ const quizData = [
         correct: [0],
         explanation:
             "Business process documentation includes challenges, data, stakeholders, and steps. Reference: ServiceNow Application Development Best Practices.",
-    },
-    {
-        question: "Which of the following is not true when extending an existing table?",
-        type: "single",
-        options: [
-            "Access controls from the parent table are evaluated when determining access to records and fields in the new table.",
-            "The new table inherits functionality built into the parent table.",
-            "The new table inherits all fields from the parent table.",
-            "All required behavior must be scripted and configured.",
-        ],
-        correct: [3],
-        explanation:
-            "Inherited functionality reduces the need for scripting all behaviors. Reference: ServiceNow Table Extension.",
-    },
-    {
-        question: "Which of the following cannot be debugged using Field Watcher?",
-        type: "single",
-        options: ["Business Rule", "Script Include", "Client Script", "Access Control"],
-        correct: [1],
-        explanation:
-            "Field Watcher debugs field changes in Business Rules, Client Scripts, and Access Controls, but not Script Includes. Reference: ServiceNow Field Watcher.",
-    },
-    {
-        question: "Which objects can be used in an Inbound Action script?",
-        type: "single",
-        options: [
-            "current and previous",
-            "current and email",
-            "current and event",
-            "current and producer",
-        ],
-        correct: [1],
-        explanation:
-            "Inbound Action scripts use 'current' (target record) and 'email' (email details). Reference: ServiceNow Inbound Email Actions.",
     },
     {
         question: "Which of the following is part of the client-side scripting API?",
@@ -5658,20 +4096,6 @@ const quizData = [
     },
     {
         question:
-            "What is the syntax for accessing the value of a form field in a Record Producer script?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variablename",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "producer.variablename accesses Record Producer form field values. Reference: ServiceNow Record Producer Scripting.",
-    },
-    {
-        question:
             "Which method displays a message with a blue background at the top of the current form by default?",
         type: "single",
         options: [
@@ -5694,19 +4118,6 @@ const quizData = [
             "A Spoke is a scoped application with Flow Designer content. Reference: ServiceNow Flow Designer Spokes.",
     },
     {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu (e.g., opening a content frame or a page in a new tab/window).",
-            "A group of menus or pages providing information or functionality to end users.",
-            "A method to filter items in the Application Navigator to allow users to quickly access information or services.",
-            "A method to provide software to end users via the web.",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a navigational function within an application menu. Reference: ServiceNow Modules.",
-    },
-    {
         question:
             "Which source control operation is available in both Studio and a Git repository?",
         type: "single",
@@ -5719,15 +4130,6 @@ const quizData = [
         correct: [0],
         explanation:
             "Creating a branch is supported in both Studio and Git. Reference: ServiceNow Source Control.",
-    },
-    {
-        question:
-            "Which of the following is not required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application Name"],
-        correct: [3],
-        explanation:
-            "Linking to a Git repository requires a URL, username, and password, but not the application name. Reference: ServiceNow Source Control Linking.",
     },
     {
         question:
@@ -5785,20 +4187,6 @@ const quizData = [
             "Extending a table reuses fields (a, b) and applies parent logic (c), but does not copy records (d). Reference: ServiceNow Table Extension.",
     },
     {
-        question:
-            "When configuring an access control without conditions or scripts, which of the following is an incorrect statement?",
-        type: "single",
-        options: [
-            "table.* grants access to all fields in the record.",
-            "table.None grants access to all records in the table.",
-            "table.field grants access to a specific field in the record.",
-            "table.id grants access to a specific record in the table.",
-        ],
-        correct: [1],
-        explanation:
-            "table.None denies access to records; it does not grant access. Reference: ServiceNow Access Control Syntax.",
-    },
-    {
         question: "Which methods are useful in an access control script?",
         type: "single",
         options: [
@@ -5825,15 +4213,6 @@ const quizData = [
             "Catalog Client Scripts and Catalog UI Policies apply to Record Producers. Reference: ServiceNow Record Producer Scripting.",
     },
     {
-        question:
-            "When a ServiceNow instance requests information from a web service, what role does ServiceNow play?",
-        type: "single",
-        options: ["Publisher", "Specialist", "Provider", "Consumer"],
-        correct: [3],
-        explanation:
-            "ServiceNow acts as a consumer when requesting data from a web service. Reference: ServiceNow Web Services.",
-    },
-    {
         question: "What is the fastest way to create and configure a Record Producer?",
         type: "single",
         options: [
@@ -5845,20 +4224,6 @@ const quizData = [
         correct: [2],
         explanation:
             "The 'Add to Service Catalog Related Link' is the fastest method to create a Record Producer. Reference: ServiceNow Record Producer Creation.",
-    },
-    {
-        question:
-            "Which objects can be used in a Scheduled Script Execution (Scheduled Job) script?",
-        type: "single",
-        options: [
-            "GlideRecord and current",
-            "GlideUser and GlideRecord",
-            "GlideSystem and GlideRecord",
-            "GlideSystem and current",
-        ],
-        correct: [2],
-        explanation:
-            "Scheduled Jobs use GlideSystem and GlideRecord for server-side operations. Reference: ServiceNow Scheduled Jobs.",
     },
     {
         question: "Can inherited fields be deleted from a table?",
@@ -5977,20 +4342,6 @@ const quizData = [
         correct: [0],
         explanation:
             "GlideDateTime handles date manipulations in server-side scripts. Reference: ServiceNow GlideDateTime API.",
-    },
-    {
-        question:
-            "Application developers can specify which ServiceNow page a user sees after submitting a new record using the Record Producer UI. How is the page specified?",
-        type: "single",
-        options: [
-            "Create an application property to store the URL",
-            "Configure the page in the Module that opens the Record Producer UI",
-            'Write a script in the Record Producer\'s Script field: producer.redirect = "<URL>";',
-            'Write an after Business Rule script for the Record Producer\'s table: window.redirect = "<URL>";',
-        ],
-        correct: [2],
-        explanation:
-            'The redirect page is set using producer.redirect = "<URL>" in the Record Producer’s script field. Reference: ServiceNow Record Producer documentation.',
     },
     {
         question:
@@ -6188,20 +4539,6 @@ const quizData = [
         correct: [0],
         explanation:
             "COPY is not a REST API method; GET, DELETE, and POST are. Reference: ServiceNow REST API.",
-    },
-    {
-        question:
-            "You are developing the MyApp application, which has a table called Table A. When this application is installed on an instance, you want Table A’s records to be installed as part of the application. Under what condition will Table A’s records be installed?",
-        type: "single",
-        options: [
-            "If Table A is active and extends the Task table.",
-            "If Table A’s records are added to the application record using the 'Create Application Files' context menu item.",
-            "If Table A has an auto-number counter for new records.",
-            "If Table A is not included in the 'System Clone > Exclude Tables' list.",
-        ],
-        correct: [1],
-        explanation:
-            "Records are included via the 'Create Application Files' menu. Reference: ServiceNow Application Installation.",
     },
     {
         question: "How can an application behind a firewall be linked to a repository?",
@@ -6411,14 +4748,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Date/Time data type, not Date, is used for dates and times. Reference: ServiceNow Field Data Types.",
-    },
-    {
-        question: "Which is not included in Form Designer?",
-        type: "single",
-        options: ["Page Header", "Schema Map", "Field Navigator", "Form Layout"],
-        correct: [1],
-        explanation:
-            "Schema Map is not part of Form Designer. Reference: ServiceNow Form Designer.",
     },
     {
         question: "When designing and creating a form, what is created to organize fields?",
@@ -6682,35 +5011,6 @@ const quizData = [
     },
     {
         question:
-            "How can a data table be specified using Guided Application Creator (GAC)? (Select three)",
-        type: "multiple",
-        options: [
-            "Uploading an existing PDF",
-            "Creating a new table on the platform",
-            "Using a free-form database",
-            "Uploading an existing spreadsheet",
-            "Using an existing table on the platform",
-            "Uploading an existing word processing document",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "GAC supports creating new tables, uploading spreadsheets, and using existing tables. Reference: ServiceNow Guided Application Creator.",
-    },
-    {
-        question: "What is the Event Registry?",
-        type: "single",
-        options: [
-            "A workflow triggered each time an event is generated, used to debug events.",
-            "An event log listing all generated events.",
-            "A method used in server-side scripts to generate events and pass parameters.",
-            "A table storing records of all events recognized by the ServiceNow system, enabling appropriate responses when events are generated.",
-        ],
-        correct: [3],
-        explanation:
-            "The Event Registry is a table for managing system events. Reference: ServiceNow Event Registry.",
-    },
-    {
-        question:
             "Identify how an application can respond to an event generated by the gs.eventQueue() method. (Select two)",
         type: "multiple",
         options: [
@@ -6818,15 +5118,6 @@ const quizData = [
     },
     {
         question:
-            "What is required to link a ServiceNow application to a Git repository? (Choose 3 answers)",
-        type: "multiple",
-        options: ["URI", "ACL", "User name", "URL", "Application name", "Password"],
-        correct: [2, 3, 5],
-        explanation:
-            "To link a ServiceNow application to a Git repository, you need the user name, URL, and password of the Git account. The URL is the repository address, and user name/password are credentials (or a personal access token). Reference: Link an application to source control - ServiceNow Docs",
-    },
-    {
-        question:
             "Which ServiceNow feature helps users retrieve information, make decisions, and perform common tasks via a messaging interface?",
         type: "single",
         options: ["Agent Workspace", "Chatbot", "Virtual Agent", "Knowledge Chat", "Now Support"],
@@ -6875,22 +5166,6 @@ const quizData = [
     },
     {
         question:
-            "When an application is ready to be shared, which of the following publishing methods are supported by ServiceNow? (Choose three answers)",
-        type: "multiple",
-        options: [
-            "Publish to the ServiceNow Store",
-            "Publish to a local USB device",
-            "Publish to a local drive",
-            "Publish to an application repository",
-            "Publish to an update set",
-            "Publish to a spreadsheet",
-        ],
-        correct: [0, 3, 4],
-        explanation:
-            "ServiceNow supports publishing applications to the ServiceNow Store, application repository, or update sets for sharing customizations. Local drives, USB devices, or spreadsheets are not supported methods. Reference: ServiceNow Application Publishing documentation.",
-    },
-    {
-        question:
             "A scoped application that includes Flow Designer content dedicated to a specific application is called:",
         type: "single",
         options: ["Flow", "Bundle", "Spoke", "Action"],
@@ -6924,15 +5199,6 @@ const quizData = [
         correct: [1],
         explanation:
             "When the 'Create Module' field is selected, the new module defaults to displaying a list of all records for the table. Reference: ServiceNow Table Creation documentation.",
-    },
-    {
-        question:
-            "The source control operation used to save local changes to an instance for later application is called a(n):",
-        type: "single",
-        options: ["Stash", "Branch", "Tag", "Update set"],
-        correct: [0],
-        explanation:
-            "A stash is used in ServiceNow source control to save local changes temporarily for later application. Note: The provided answer (Branch) seems incorrect based on standard ServiceNow terminology. Reference: ServiceNow Source Control documentation.",
     },
     {
         question: "What are application files in a ServiceNow application?",
@@ -7081,45 +5347,6 @@ const quizData = [
             "If 'Readable' is not selected, the 'Can create, can update, and can delete' options become unavailable, as read access is a prerequisite. Reference: ServiceNow Application Access documentation.",
     },
     {
-        question: "Which of the following is not a trigger type in Flow Designer?",
-        type: "single",
-        options: ["Outbound Email", "Application", "Record", "Schedule"],
-        correct: [0],
-        explanation:
-            "Flow Designer supports Application, Record, and Schedule triggers, but Outbound Email is not a trigger type. Reference: ServiceNow Flow Designer documentation.",
-    },
-    {
-        question:
-            "When creating a new application file in a scoped application, which of the following has cross-scope access enabled by default?",
-        type: "single",
-        options: ["REST Message", "Table", "Script Include", "Workflow"],
-        correct: [1],
-        explanation:
-            "Tables in scoped applications have cross-scope access enabled by default to allow broader access control. Reference: ServiceNow Scoped Application documentation.",
-    },
-    {
-        question:
-            "Which of the following is incorrect about the 'Weight' field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight is sent for the same record and recipient",
-            "If the weight value is 0, the email is not sent",
-            "The weight value defaults to 0",
-            "If the weight value is 0, the notification is always sent when the criteria for sending the notification are met",
-        ],
-        correct: [1],
-        explanation:
-            "A weight value of 0 does not prevent email notifications from being sent; they are sent if conditions are met. Reference: ServiceNow Email Notification documentation.",
-    },
-    {
-        question: "Which object is not accessible to a display business rule?",
-        type: "single",
-        options: ["previous", "GlideSystem", "g_scratchpad", "current"],
-        correct: [1],
-        explanation:
-            "Display business rules cannot access GlideSystem, but they can access previous, g_scratchpad, and current objects. Reference: ServiceNow Business Rule documentation.",
-    },
-    {
         question: "Which features are available in the Global application? (Choose two answers)",
         type: "multiple",
         options: [
@@ -7131,34 +5358,6 @@ const quizData = [
         correct: [0],
         explanation:
             "The provided answer only lists Automated Test Framework, but both Automated Test Framework and Flow Designer are available in the Global application. Reference: ServiceNow Global Scope documentation.",
-    },
-    {
-        question: "Which of the following is not supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Calling a subflow from a flow",
-            "Using rollback to test a flow",
-            "Using delegated developers",
-            "Running a flow from a MetricBase trigger",
-        ],
-        correct: [1],
-        explanation:
-            "Flow Designer does not support rollback for testing flows. Other options like subflows, delegated developers, and MetricBase triggers are supported. Reference: ServiceNow Flow Designer documentation.",
-    },
-    {
-        question:
-            "Which of the following are true about ServiceNow reports? (Choose three answers)",
-        type: "multiple",
-        options: [
-            "All users can view shared reports",
-            "Can represent data graphically",
-            "All users can generate reports on any table",
-            "Can be run on-demand by approved users",
-            "Can be scheduled to run and distributed via email",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "ServiceNow reports can represent data graphically, be run on-demand by approved users, and be scheduled for email distribution. Not all users can view shared reports or generate reports on any table. Reference: ServiceNow Reporting documentation.",
     },
     {
         question: "Modules require a link type. Which of the following is a list of link types?",
@@ -7197,15 +5396,6 @@ const quizData = [
     },
     {
         question:
-            "The business rule script template is as follows: [Image1] This type of JavaScript function is called:",
-        type: "single",
-        options: ["Constructor", "Scoped", "Anonymous", "Self-invoking"],
-        correct: [3],
-        explanation:
-            "The script template represents a self-invoking JavaScript function, which executes immediately upon definition. Reference: ServiceNow Scripting documentation.",
-    },
-    {
-        question:
             "Which method call returns true only if the currently logged-in user has the catalog_admin role and does not return true otherwise?",
         type: "single",
         options: [
@@ -7217,43 +5407,6 @@ const quizData = [
         correct: [1],
         explanation:
             "g_user.hasRoleExactly('catalog_admin') returns true only if the user has the catalog_admin role and no other roles affect the outcome. Reference: ServiceNow GlideUser documentation.",
-    },
-    {
-        question:
-            "When creating a Utils Script Include, there are basic strategies. Identify the step that does not belong.",
-        type: "single",
-        options: [
-            "Identify the table",
-            "Script the functions",
-            "Create the class",
-            "Create a prototype object from the new class",
-        ],
-        correct: [0],
-        explanation:
-            "Identifying the table is not a step in creating a Utils Script Include, which focuses on scripting functions and creating classes. Reference: ServiceNow Script Include documentation.",
-    },
-    {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control? (Choose two answers)",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles grant access to source control operations like importing or linking applications. Reference: ServiceNow Source Control documentation.",
-    },
-    {
-        question:
-            "When configuring the content of an email notification, which syntax should be used to reference the properties of the event that triggers the notification?",
-        type: "single",
-        options: [
-            "${event.<property name>}",
-            "${current.<property name>}",
-            "${<property name>.getDisplayValue()}",
-            "${gs.<property name>}",
-        ],
-        correct: [0],
-        explanation:
-            "${event.<property name>} is the correct syntax to reference event properties in email notifications. Reference: ServiceNow Email Notification documentation.",
     },
     {
         question:
@@ -7270,19 +5423,6 @@ const quizData = [
             "A Protected Script Include’s protection policy applies only when the application is downloaded from the ServiceNow App Store. Reference: ServiceNow Script Include documentation.",
     },
     {
-        question: "Which of the following is true about GlideUser (g_user) methods?",
-        type: "single",
-        options: [
-            "Can only be used in client scripts and UI policies",
-            "Can only be used in business rules",
-            "Can be used in client scripts, UI policies, and UI actions",
-            "Can be used in business rules and Script Includes",
-        ],
-        correct: [2],
-        explanation:
-            "GlideUser (g_user) methods are used in client-side scripts, including client scripts, UI policies, and UI actions. Reference: ServiceNow GlideUser documentation.",
-    },
-    {
         question:
             "When configuring a module, what does the override application menu roles configuration option do?",
         type: "single",
@@ -7297,33 +5437,6 @@ const quizData = [
             "The override option allows users with module roles to access the module despite lacking application menu access. Reference: ServiceNow Module Configuration documentation.",
     },
     {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Source",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "Transform Maps define field relationships between Import Set tables and existing ServiceNow tables. Reference: ServiceNow Import Set documentation.",
-    },
-    {
-        question: "When configuring a REST message, the endpoint is:",
-        type: "single",
-        options: [
-            "A command to stop the execution of the REST script",
-            "The URI of the data to be accessed, queried, or modified",
-            "Information about the format of the returned data",
-            "A response from the provider indicating no data was returned",
-        ],
-        correct: [1],
-        explanation:
-            "The endpoint in a REST message is the URI specifying the data to access, query, or modify. Reference: ServiceNow REST Message documentation.",
-    },
-    {
         question: "When evaluating access controls, ServiceNow searches for and evaluates:",
         type: "single",
         options: [
@@ -7335,34 +5448,6 @@ const quizData = [
         correct: [2],
         explanation:
             "ServiceNow evaluates access controls from the most specific to the most generic match to determine permissions. Reference: ServiceNow Access Control documentation.",
-    },
-    {
-        question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole('admin') returns true if the logged-in user has the admin role. Reference: ServiceNow GlideSystem documentation.",
-    },
-    {
-        question:
-            "From the following list, identify one reason an application would not be suitable for ServiceNow. The application:",
-        type: "single",
-        options: [
-            "Requires workflows to manage processes",
-            "Requires low-level programming libraries to be used as-is",
-            "Requires reporting capabilities",
-            "Heavily uses forms to manipulate data",
-        ],
-        correct: [1],
-        explanation:
-            "ServiceNow is not suited for applications requiring low-level programming libraries as-is, as it focuses on high-level workflows and forms. Reference: ServiceNow Application Development documentation.",
     },
     {
         question: "Identify the incorrect statement about ServiceNow delegated development.",
@@ -7391,19 +5476,6 @@ const quizData = [
             "The REST API Explorer generates sample code for sending REST requests to ServiceNow. Reference: ServiceNow REST API Explorer documentation.",
     },
     {
-        question: "Which of the following is true about application scope?",
-        type: "single",
-        options: [
-            "All applications automatically become part of the global scope",
-            "Applications downloaded from third-party ServiceNow application developers will never have name conflicts",
-            "Any developer can edit any application",
-            "Developers can choose the namespace prefix for the scope",
-        ],
-        correct: [1],
-        explanation:
-            "Third-party ServiceNow applications are designed to avoid name conflicts through unique scoping. Reference: ServiceNow Application Scope documentation.",
-    },
-    {
         question: "The basic behavior of a table in a private scope application is:",
         type: "single",
         options: [
@@ -7415,19 +5487,6 @@ const quizData = [
         correct: [3],
         explanation:
             "In a private scope application, all application scopes can read from the table by default. Reference: ServiceNow Scoped Application documentation.",
-    },
-    {
-        question: "Which of the following is not a purpose of application scope?",
-        type: "single",
-        options: [
-            "Provide relationships among application artifacts",
-            "Provide a way to track the user who developed an application",
-            "Provide a namespace (prefix and scope name) to prevent name collisions between applications",
-            "Control how scripts from another scope can modify a scoped application’s tables",
-        ],
-        correct: [1],
-        explanation:
-            "Application scope does not track the user who developed an application; it manages artifacts, namespaces, and access control. Reference: ServiceNow Application Scope documentation.",
     },
     {
         question:
@@ -7444,56 +5503,6 @@ const quizData = [
             "Business process documentation should include the business issue, data input/output, users/stakeholders, and process steps. Reference: ServiceNow Application Development Best Practices.",
     },
     {
-        question:
-            "You are developing a MyApp application with Table A. When the MyApp application is installed on an instance, records from Table A need to be installed as part of the application. Records from Table A will be installed when:",
-        type: "single",
-        options: [
-            "Table A is active and extends the Task table",
-            "Table A’s records have been added to the application record using the 'Create Application File' context menu item",
-            "Table A has an auto-number counter for new records",
-            "Table A is not included in the System Clone > Exclude Tables list",
-        ],
-        correct: [1],
-        explanation:
-            "Records are included in the application when added via the 'Create Application File' context menu item. Reference: ServiceNow Application File documentation.",
-    },
-    {
-        question:
-            "Application developers can specify the ServiceNow page that users see after submitting a new record using the Record Producer UI. How is the page specified?",
-        type: "single",
-        options: [
-            "Write an after Business Rule script for the Record Producer's table: window.redirect = '<URL>';",
-            "Create an application property to store the URL",
-            "Write a script in the Record Producer's Script field: producer.redirect = '<URL>';",
-            "Configure the page in the Module that opens the Record Producer UI",
-        ],
-        correct: [2],
-        explanation:
-            "Application developers can specify the redirect page by writing a script in the Record Producer's Script field using producer.redirect = '<URL>'. For example, producer.redirect = 'home.do'; redirects the user to the homepage. Reference: /bundle record producer data and redirect users",
-    },
-    {
-        question:
-            "What is required to link a ServiceNow application to a Git repository? (Choose 3 answers)",
-        type: "multiple",
-        options: ["URI", "ACL", "User name", "URL", "Application name", "Password"],
-        correct: [2, 3, 5],
-        explanation:
-            "To link a ServiceNow application to a Git repository, you need the user name, URL, and password of the Git account. The URL is the repository address, and user name/password are credentials (or a personal access token). Reference: Link an application to source control - ServiceNow Docs",
-    },
-    {
-        question: "What is the ServiceNow app repository?",
-        type: "single",
-        options: [
-            "A request table",
-            "An alias for an update set",
-            "A database containing ServiceNow apps",
-            "A collection of files in a Git database",
-        ],
-        correct: [2],
-        explanation:
-            "The ServiceNow app repository is a database containing ServiceNow applications for installation and management. Reference: ServiceNow Application Repository documentation.",
-    },
-    {
         question: "The basic behavior of a table in a private scope application is:",
         type: "single",
         options: [
@@ -7505,103 +5514,6 @@ const quizData = [
         correct: [3],
         explanation:
             "In a private scope application, all application scopes can read from the table by default. Reference: ServiceNow Scoped Application documentation.",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu that opens a page in the content frame or in a new tab or window",
-            "A group of menus or pages that provide related information and functionality to end users",
-            "A way to filter items in the Application Navigator to enable users to quickly access information and services",
-            "A web-based method for delivering software to end users",
-        ],
-        correct: [2],
-        explanation:
-            "A module is a navigational item in the Application Navigator that filters and provides quick access to information and services. Reference: ServiceNow Module documentation.",
-    },
-    {
-        question:
-            "What syntax is used to access the value of a Record Producer form field in a Record Producer script?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variablename",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "producer.variablename is used to access Record Producer form field values in scripts. Reference: ServiceNow Record Producer documentation.",
-    },
-    {
-        question:
-            "Which of the following is incorrect about the 'Weight' field in email notifications?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight is sent for the same record and recipient",
-            "If the weight value is 0, the email is not sent",
-            "The weight value defaults to 0",
-            "If the weight value is 0, the notification is always sent when the conditions for sending the notification are met",
-        ],
-        correct: [1],
-        explanation:
-            "A weight value of 0 does not prevent email notifications from being sent; they are sent if conditions are met. Reference: ServiceNow Email Notification documentation.",
-    },
-    {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control? (Choose two answers)",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles grant access to source control operations like importing or linking applications. Reference: ServiceNow Source Control documentation.",
-    },
-    {
-        question:
-            "When creating a scoped application that includes flow actions, what is that application called?",
-        type: "single",
-        options: ["Bundle", "Flow", "Action", "Spoke"],
-        correct: [3],
-        explanation:
-            "A scoped application with flow actions is called a Spoke, providing reusable flow components. Reference: ServiceNow Flow Designer documentation.",
-    },
-    {
-        question:
-            "From the following list, identify one reason an application would not be suitable for ServiceNow. The application:",
-        type: "single",
-        options: [
-            "Requires workflows to manage processes",
-            "Requires low-level programming libraries to be used as-is",
-            "Requires reporting capabilities",
-            "Heavily uses forms to manipulate data",
-        ],
-        correct: [1],
-        explanation:
-            "ServiceNow is not suited for applications requiring low-level programming libraries as-is, as it focuses on high-level workflows and forms. Reference: ServiceNow Application Development documentation.",
-    },
-    {
-        question:
-            "a. Replace outdated and inadequate custom business applications and processes b. Extend service delivery and management to all enterprise departments c. Allow users to have full access to all ServiceNow tables, records, and fields d. Increase the value of ServiceNow",
-        type: "single",
-        options: ["a, b, c", "a, b, c, d", "b, c, d", "a, b, d"],
-        correct: [3],
-        explanation:
-            "ServiceNow aims to replace outdated applications (a), extend service delivery (b), and increase value (d), but not provide full access to all tables (c). Reference: ServiceNow Platform documentation.",
-    },
-    {
-        question:
-            "Which of the following are true about ServiceNow reports? (Choose three answers)",
-        type: "multiple",
-        options: [
-            "All users can view shared reports",
-            "Can represent data graphically",
-            "All users can generate reports on any table",
-            "Can be run on-demand by approved users",
-            "Can be scheduled to run and distributed via email",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "ServiceNow reports can represent data graphically, be run on-demand by approved users, and be scheduled for email distribution. Not all users can view shared reports or generate reports on any table. Reference: ServiceNow Reporting documentation.",
     },
     {
         question:
@@ -7642,19 +5554,6 @@ const quizData = [
         correct: [1],
         explanation:
             "A web service enables applications to connect to other software over a network, such as via REST or SOAP. Reference: ServiceNow Web Services documentation.",
-    },
-    {
-        question: "Which of the following is true about application scope?",
-        type: "single",
-        options: [
-            "All applications automatically become part of the global scope",
-            "Applications downloaded from third-party ServiceNow application developers will never have name conflicts",
-            "Any developer can edit any application",
-            "Developers can choose the namespace prefix for the scope",
-        ],
-        correct: [1],
-        explanation:
-            "Third-party ServiceNow applications are designed to avoid name conflicts through unique scoping. Reference: ServiceNow Application Scope documentation.",
     },
     {
         question: "How is access to application menus and modules controlled?",
@@ -7704,33 +5603,6 @@ const quizData = [
         correct: [1],
         explanation:
             "Application files are the ServiceNow artifacts (e.g., scripts, tables, UI elements) that make up an application. Reference: ServiceNow Application Development documentation.",
-    },
-    {
-        question:
-            "When creating a Utils Script Include, there are basic strategies. Identify the step that does not belong.",
-        type: "single",
-        options: [
-            "Identify the table",
-            "Script the functions",
-            "Create the class",
-            "Create a prototype object from the new class",
-        ],
-        correct: [0],
-        explanation:
-            "Identifying the table is not a step in creating a Utils Script Include, which focuses on scripting functions and creating classes. Reference: ServiceNow Script Include documentation.",
-    },
-    {
-        question: "Which objects can be used in an inbound action script?",
-        type: "single",
-        options: [
-            "Current object and previous object",
-            "Current object and email",
-            "Current object and event",
-            "Current object and producer",
-        ],
-        correct: [1],
-        explanation:
-            "Inbound action scripts can use the current object and email object to process incoming emails. Reference: ServiceNow Inbound Action documentation.",
     },
     {
         question:
@@ -7791,19 +5663,6 @@ const quizData = [
             "GlideDateTime provides methods for date manipulation in server-side scripts. Reference: ServiceNow GlideDateTime documentation.",
     },
     {
-        question: "Which of the following client-side scripts apply to a Record Producer?",
-        type: "single",
-        options: [
-            "Catalog Client Scripts and Catalog UI Policies",
-            "UI Scripts and UI Actions",
-            "UI Scripts and Record Producer Scripts",
-            "Client Scripts and UI Policies",
-        ],
-        correct: [0],
-        explanation:
-            "Catalog Client Scripts and Catalog UI Policies apply to Record Producers for client-side behavior. Reference: ServiceNow Record Producer documentation.",
-    },
-    {
         question: "When evaluating access controls, ServiceNow searches for and evaluates:",
         type: "single",
         options: [
@@ -7839,14 +5698,6 @@ const quizData = [
             "Storing logic in Script Includes ensures execution only when called (b), hides logic in Store apps (c), and centralizes edits (d). Reference: ServiceNow Script Include documentation.",
     },
     {
-        question: "Which object is not accessible to a display business rule?",
-        type: "single",
-        options: ["previous", "GlideSystem", "g_scratchpad", "current"],
-        correct: [0],
-        explanation:
-            "Display business rules cannot access the previous object, but they can access g_scratchpad and current. Reference: ServiceNow Business Rule documentation.",
-    },
-    {
         question:
             "Which of the following GlideRecord methods execute a query against a database table? (Choose three answers)",
         type: "multiple",
@@ -7871,20 +5722,6 @@ const quizData = [
     },
     {
         question:
-            "Which of the following methods prints a message with a blue background at the top of the current form by default?",
-        type: "single",
-        options: [
-            "g_form.addInfoMsg()",
-            "g_form.addInfoMessage()",
-            "g_form.showFieldMessage()",
-            "g_form.showFieldMsg()",
-        ],
-        correct: [1],
-        explanation:
-            "g_form.addInfoMessage() displays a blue-background message at the top of the form. Reference: ServiceNow GlideForm documentation.",
-    },
-    {
-        question:
             "Which business requirements and processes should be documented as part of an application development plan? (Choose four answers)",
         type: "multiple",
         options: [
@@ -7899,19 +5736,6 @@ const quizData = [
         correct: [0, 1, 3, 5],
         explanation:
             "Document business issue, data input/output, process steps, and users/stakeholders for the application plan. Reference: ServiceNow Application Development Best Practices.",
-    },
-    {
-        question: "Which of the following is true about GlideUser (g_user) methods?",
-        type: "single",
-        options: [
-            "Can only be used in client scripts and UI policies",
-            "Can only be used in business rules",
-            "Can be used in client scripts, UI policies, and UI actions",
-            "Can be used in business rules and Script Includes",
-        ],
-        correct: [2],
-        explanation:
-            "GlideUser (g_user) methods are used in client-side scripts, including client scripts, UI policies, and UI actions. Reference: ServiceNow GlideUser documentation.",
     },
     {
         question:
@@ -7955,76 +5779,12 @@ const quizData = [
             "Modules are not required to be associated with a table; they can link to various content types. Reference: ServiceNow Module documentation.",
     },
     {
-        question:
-            "When a ServiceNow instance requests information from a web service, ServiceNow is the web service:",
-        type: "single",
-        options: ["Publisher", "Specialist", "Provider", "Consumer"],
-        correct: [3],
-        explanation:
-            "ServiceNow acts as a consumer when requesting information from a web service. Reference: ServiceNow Web Services documentation.",
-    },
-    {
-        question:
-            "When configuring the content of an email notification, which syntax should be used to reference the properties of the event that triggers the notification?",
-        type: "single",
-        options: [
-            "${event.<property name>}",
-            "${current.<property name>}",
-            "${<property name>.getDisplayValue()}",
-            "${gs.<property name>}",
-        ],
-        correct: [0],
-        explanation:
-            "${event.<property name>} is the correct syntax to reference event properties in email notifications. Reference: ServiceNow Email Notification documentation.",
-    },
-    {
-        question:
-            "In a business rule, which of the following returns true if the currently logged-in user has the admin role?",
-        type: "single",
-        options: [
-            "g_form.hasRoleExactly('admin')",
-            "gs.hasRole('admin')",
-            "g_form.hasRole('admin')",
-            "gs.hasRoleExactly('admin')",
-        ],
-        correct: [1],
-        explanation:
-            "gs.hasRole('admin') returns true if the logged-in user has the admin role. Reference: ServiceNow GlideSystem documentation.",
-    },
-    {
         question: "Which of the following is not part of the Form Designer?",
         type: "single",
         options: ["Form Layout", "Page Header", "Schema Map", "Field Navigator"],
         correct: [2],
         explanation:
             "Schema Map is not part of the Form Designer; it is a separate feature for table relationships. Reference: ServiceNow Form Designer documentation.",
-    },
-    {
-        question:
-            "As part of an application development plan, it is a best practice to define the business requirements and processes the application will manage. What considerations should be documented as part of the business process?",
-        type: "single",
-        options: [
-            "Business issue, data input/output, users/stakeholders, process steps",
-            "Business issue, data input/output, project schedule, process steps",
-            "Business issue, data input/output, users/stakeholders, database capacity",
-            "Business issue, users/stakeholders, available licenses, database capacity",
-        ],
-        correct: [0],
-        explanation:
-            "Business process documentation should include the business issue, data input/output, users/stakeholders, and process steps. Reference: ServiceNow Application Development Best Practices.",
-    },
-    {
-        question: "When configuring a REST message, the endpoint is:",
-        type: "single",
-        options: [
-            "A command to stop the execution of the REST script",
-            "The URI of the data to be accessed, queried, or modified",
-            "Information about the format of the returned data",
-            "A response from the provider indicating no data was returned",
-        ],
-        correct: [1],
-        explanation:
-            "The endpoint in a REST message is the URI specifying the data to access, query, or modify. Reference: ServiceNow REST Message documentation.",
     },
     {
         question:
@@ -8083,21 +5843,6 @@ const quizData = [
         correct: [0],
         explanation:
             "Non-admin users cannot be granted permission to develop global applications, as this is restricted to admins. Reference: ServiceNow Delegated Development documentation.",
-    },
-    {
-        question:
-            "When debugging email notifications, what should you check in the user record? (Choose two answers)",
-        type: "multiple",
-        options: [
-            "The user must not be locked out",
-            "Delegation must be enabled",
-            "Active must be true",
-            "First and last name fields must have values set",
-            "The email field must have a valid value set",
-        ],
-        correct: [2, 4],
-        explanation:
-            "The user record must have Active set to true and a valid email address for notifications to work. Reference: ServiceNow Email Notification documentation.",
     },
     {
         question:
@@ -8162,15 +5907,6 @@ const quizData = [
             "Custom apps are built to meet specific internal use cases and create third-party integrations. Reference: ServiceNow Application Development documentation.",
     },
     {
-        question:
-            "A scoped application that includes Flow Designer content dedicated to a specific application is called:",
-        type: "single",
-        options: ["Spoke", "Bundle", "Action", "Flow"],
-        correct: [0],
-        explanation:
-            "A scoped application with dedicated Flow Designer content is called a Spoke. Reference: ServiceNow Flow Designer documentation.",
-    },
-    {
         question: "Which of the following cannot be debugged using a Field Watcher?",
         type: "single",
         options: ["Business Rule", "Script Include", "Client Script", "Access Control"],
@@ -8212,15 +5948,6 @@ const quizData = [
         correct: [1],
         explanation:
             "User-defined, non-inherited fields can be detected and removed from a table. Reference: ServiceNow Table Configuration documentation.",
-    },
-    {
-        question:
-            "When creating a new application file in a scoped application, which of the following has cross-scope access enabled by default?",
-        type: "single",
-        options: ["REST Message", "Table", "Script Include", "Workflow"],
-        correct: [1],
-        explanation:
-            "Tables in scoped applications have cross-scope access enabled by default to allow broader access control. Reference: ServiceNow Scoped Application documentation.",
     },
     {
         question: "Which features are available in Studio? (Choose two answers)",
@@ -8351,15 +6078,6 @@ const quizData = [
     },
     {
         question:
-            "Which of the following is not required to link a ServiceNow application to a Git repository?",
-        type: "single",
-        options: ["Password", "URL", "Username", "Application name"],
-        correct: [3],
-        explanation:
-            "The application name is not required to link to a Git repository; username, URL, and password are needed. Reference: ServiceNow Source Control documentation.",
-    },
-    {
-        question:
             "When writing a client script to provide feedback targeted at a specific field, which method should be used?",
         type: "single",
         options: [
@@ -8419,19 +6137,6 @@ const quizData = [
     },
     {
         question:
-            "Which source control operation is available from both Studio and a Git repository?",
-        type: "single",
-        options: [
-            "Create a branch",
-            "Apply remote changes",
-            "Save local changes",
-            "Edit repository configuration",
-        ],
-        correct: [0],
-        explanation: "Creating a branch is available in both Studio and Git repositories",
-    },
-    {
-        question:
             "For a Script Include with a protection policy value of Protected, which of the following is true?",
         type: "single",
         options: [
@@ -8473,31 +6178,6 @@ const quizData = [
     },
     {
         question:
-            "The source control operation used to save local changes to an instance for later application is called a(n):",
-        type: "single",
-        options: ["Branch", "Tag", "Stash", "Update set"],
-        correct: [2],
-        explanation:
-            "A stash is used in ServiceNow source control to save local changes temporarily for later application. Note: The provided answer (Branch) in the original document is incorrect; the correct term is Stash. Reference: ServiceNow Source Control documentation.",
-    },
-    {
-        question:
-            "When an application is ready to be shared, which of the following publishing methods are supported by ServiceNow? (Choose three answers)",
-        type: "multiple",
-        options: [
-            "Publish to an application repository",
-            "Publish to a spreadsheet",
-            "Publish to a local USB device",
-            "Publish to a local drive",
-            "Publish to an update set",
-            "Publish to the ServiceNow Store",
-        ],
-        correct: [0, 4, 5],
-        explanation:
-            "ServiceNow supports publishing applications to an application repository, update sets, or the ServiceNow Store for sharing. Spreadsheets, USB devices, and local drives are not valid methods. Reference: ServiceNow Application Publishing documentation.",
-    },
-    {
-        question:
             "For a user to pass an access control, which of the following statements must evaluate to true? (Choose three answers)",
         type: "multiple",
         options: [
@@ -8510,20 +6190,6 @@ const quizData = [
         correct: [1, 3, 4],
         explanation:
             "For a user to pass an access control, the conditions, required roles, and script (if present) must evaluate to true. Other access controls and business rules are not directly required. Reference: ServiceNow Access Control documentation.",
-    },
-    {
-        question:
-            "Debug information for access controls identifies whether each element granted or denied access. The elements are displayed in the debug information in the order they are evaluated. In which order are access control elements evaluated?",
-        type: "single",
-        options: [
-            "Conditions, Roles, Script",
-            "Conditions, Script, Roles",
-            "Roles, Conditions, Script",
-            "Script, Conditions, Roles",
-        ],
-        correct: [2],
-        explanation:
-            "Access control elements are evaluated in the order of Roles, Conditions, and Script to determine access permissions. Reference: ServiceNow Access Control documentation.",
     },
     {
         question: "Which method is used to retrieve an application property value in a script?",
@@ -8546,21 +6212,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Query operations cannot be directly controlled by application access settings, unlike Update, Delete, and Create, which are explicitly managed. Reference: ServiceNow Application Access documentation.",
-    },
-
-    {
-        question:
-            "Which platform feature can be used to determine the relationship between fields in an Import Set table and fields in an existing ServiceNow table?",
-        type: "single",
-        options: [
-            "Business Service Management Map",
-            "Data Source",
-            "Transform Map",
-            "CI Relationship Builder",
-        ],
-        correct: [2],
-        explanation:
-            "A Transform Map defines the field mappings between an Import Set table and a target ServiceNow table, enabling data transformation during import. Reference: ServiceNow Docs - Transform Maps",
     },
     {
         question:
@@ -8614,33 +6265,6 @@ const quizData = [
     },
     {
         question:
-            "When configuring an access control without conditions or scripts, which of the following statements is not true?",
-        type: "single",
-        options: [
-            "table.* grants access to all fields in a record",
-            "table.None grants access to all records in a table",
-            "table.field grants access to a specific field in a record",
-            "table.id grants access to a specific record in a table",
-        ],
-        correct: [3],
-        explanation:
-            "table.id does not grant access to a specific record; access controls are defined at the table or field level, not by record ID. Reference: ServiceNow Docs - Access Control Rules",
-    },
-    {
-        question: "What is the Event Registry?",
-        type: "single",
-        options: [
-            "A table containing a record of all events recognized by the ServiceNow system, enabling ServiceNow to react when an event is generated",
-            "A workflow that is triggered each time an event is generated, used for debugging events",
-            "A method used in server-side scripts to generate events and pass parameters",
-            "An event log listing all generated events",
-        ],
-        correct: [0],
-        explanation:
-            "The Event Registry (sys_event) stores all recognized events, allowing the system to trigger actions like notifications or scripts. Reference: ServiceNow Docs - Event Management",
-    },
-    {
-        question:
             "To review scripts, reports, and other application artifacts included in a published application:",
         type: "single",
         options: [
@@ -8674,20 +6298,6 @@ const quizData = [
         correct: [3],
         explanation:
             "gs.info() is the recommended logging method for scoped applications, as gs.print() and gs.log() are restricted. Reference: ServiceNow Docs - Scoped API Logging",
-    },
-    {
-        question:
-            "Which objects can be used in a Scheduled Script Execution (Scheduled Job) script?",
-        type: "single",
-        options: [
-            "GlideRecord and current object",
-            "GlideUser and GlideRecord",
-            "GlideSystem and GlideRecord",
-            "GlideSystem and current object",
-        ],
-        correct: [2],
-        explanation:
-            "Scheduled Scripts use GlideSystem (gs) for system functions and GlideRecord for database operations. Reference: ServiceNow Docs - Scheduled Script Execution",
     },
     {
         question: "Which of the following statements is not true about the Form Designer?",
@@ -8763,28 +6373,6 @@ const quizData = [
             "Tables can be created by uploading a spreadsheet, extending an existing table, or creating a custom table in Studio or Table Creator. Reference: ServiceNow Docs - Table Creation",
     },
     {
-        question: "Which of the following is not a purpose of application scoping?",
-        type: "single",
-        options: [
-            "Provide relationships between application artifacts",
-            "Provide a way to track the user who developed an application",
-            "Provide a namespace (prefix and scope name) to prevent application name collisions",
-            "Control how scripts from another scope can modify the scoped application’s tables",
-        ],
-        correct: [1],
-        explanation:
-            "Application scoping does not track the developer; it manages namespaces, access, and artifact relationships. Reference: ServiceNow Docs - Application Scoping",
-    },
-    {
-        question:
-            "When right-clicking a column header in a table’s list, which report types can be created?",
-        type: "single",
-        options: ["Bar, Pie, Histogram, and Line", "Bar", "Bar, Pie, and Histogram", "Bar and Pie"],
-        correct: [3],
-        explanation:
-            "Right-clicking a column header allows creating Bar or Pie reports from the list view. Reference: ServiceNow Docs - Reports",
-    },
-    {
         question:
             "Identify how an application responds to events generated by the gs.eventQueue() method.",
         type: "multiple",
@@ -8825,32 +6413,6 @@ const quizData = [
         correct: [3],
         explanation:
             "By default, all application scopes can read from a private scope table unless restricted by access controls. Reference: ServiceNow Docs - Scoped Application Tables",
-    },
-    {
-        question: "Which statements are true about the Form Designer?",
-        type: "multiple",
-        options: [
-            "To add a field to the form layout, drag a field from the Fields tab to the desired location on the form.",
-            "To create a new field on the form’s table, drag the appropriate data type from the Field Types tab to the form and configure the new field.",
-            "To remove a field from the form layout, hover over the field to enable the Action button and select the Delete (X) button.",
-            "To add a section to the form layout, drag a section from the Field Types tab to the desired location on the form.",
-        ],
-        correct: [0, 1, 2],
-        explanation:
-            "Form Designer allows dragging fields, creating new fields, and removing fields, but sections are not added via the Field Types tab. Reference: ServiceNow Docs - Form Designer",
-    },
-    {
-        question: "A module requires a link type. Which of the following is a list of link types?",
-        type: "single",
-        options: [
-            "List of Records, Separator, Catalog Type, Roles",
-            "Assessment, List of Records, Separator, Timeline Page",
-            "List of Records, Content Page, Order, URL (from Arguments:)",
-            "Assessment, List of Records, Content Page, Roles",
-        ],
-        correct: [2],
-        explanation:
-            "Valid link types include List of Records, Content Page, Order, and URL (from Arguments:). Reference: ServiceNow Docs - Module Link Types",
     },
     {
         question: "What do client-side scripts manage?",
@@ -8921,14 +6483,6 @@ const quizData = [
             "Extending a table inherits fields and logic, allowing reuse or relabeling, but does not copy records. Reference: ServiceNow Docs - Table Extension",
     },
     {
-        question: "Which of the following is not a trigger type in Flow Designer?",
-        type: "single",
-        options: ["Outbound Email", "Application", "Record", "Schedule"],
-        correct: [0],
-        explanation:
-            "Flow Designer supports Application, Record, and Schedule triggers, but not Outbound Email. Reference: ServiceNow Docs - Flow Designer Triggers",
-    },
-    {
         question:
             "Which of the following is not an example of an application using a Scheduled Script Execution (Scheduled Job)?",
         type: "single",
@@ -8941,19 +6495,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Scheduled Jobs run server-side scripts, not client-side scripts. Reference: ServiceNow Docs - Scheduled Script Execution",
-    },
-    {
-        question: "Which of the following is not supported in Flow Designer?",
-        type: "single",
-        options: [
-            "Calling a subflow from a flow",
-            "Testing a flow using rollback",
-            "Using delegated developers",
-            "Running a flow from a MetricBase trigger",
-        ],
-        correct: [1],
-        explanation:
-            "Flow Designer does not support rollback for testing; it supports subflows, delegated developers, and MetricBase triggers. Reference: ServiceNow Docs - Flow Designer",
     },
     {
         question: "What is the purpose of the Application Picker?",
@@ -8996,40 +6537,6 @@ const quizData = [
             "g_user.hasRole() returns true if the user has the specified role or is an admin. Reference: ServiceNow Docs - GlideUser API",
     },
     {
-        question: "Which of the following client-side scripts apply to a Record Producer?",
-        type: "single",
-        options: [
-            "UI Script and UI Action",
-            "UI Script and Record Producer Script",
-            "Client Script and UI Policy",
-            "Catalog Client Script and Catalog UI Policy",
-        ],
-        correct: [3],
-        explanation:
-            "Catalog Client Scripts and Catalog UI Policies apply to Record Producers in the Service Catalog. Reference: ServiceNow Docs - Record Producer Scripts",
-    },
-    {
-        question: "Which of the following is not a client-side script debugging strategy?",
-        type: "single",
-        options: ["g_form.addInfoMessage()", "Field Watcher", "jslog()", "gs.log()"],
-        correct: [3],
-        explanation:
-            "gs.log() is a server-side method; client-side debugging uses g_form.addInfoMessage(), Field Watcher, or jslog(). Reference: ServiceNow Docs - Client Script Debugging",
-    },
-    {
-        question: "Which of the following is part of the client-side script API?",
-        type: "single",
-        options: [
-            "workflow.scratchpad",
-            "GlideUser object (g_user)",
-            "current object and previous object",
-            "GlideSystem object (gs)",
-        ],
-        correct: [1],
-        explanation:
-            "The GlideUser (g_user) object is part of the client-side API for user information. Reference: ServiceNow Docs - GlideUser API",
-    },
-    {
         question: "To import new data into ServiceNow from a spreadsheet, which steps can be used?",
         type: "single",
         options: [
@@ -9055,19 +6562,6 @@ const quizData = [
         correct: [2],
         explanation:
             "The Add to Service Catalog related link is the fastest way to create a Record Producer for a table. Reference: ServiceNow Docs - Record Producer",
-    },
-    {
-        question: "What is the baseline behavior of a table in a private scope application?",
-        type: "single",
-        options: [
-            "The table and its data cannot be accessed using web services",
-            "All business rules can read, write, delete, and update the table",
-            "Only artifacts in the table’s application can read from the table",
-            "All application scopes can read from the table",
-        ],
-        correct: [3],
-        explanation:
-            "By default, all application scopes can read from a private scope table unless restricted. Reference: ServiceNow Docs - Scoped Application Tables",
     },
     {
         question:
@@ -9096,19 +6590,6 @@ const quizData = [
         correct: [0, 1, 3],
         explanation:
             "Global applications support Automated Test Framework, Source Control, and Flow Designer. Delegated Development is scoped. Reference: ServiceNow Docs - Global Applications",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in a content frame or a separate tab or window",
-            "A group of menus or pages that provide related information and functionality to end users",
-            "A method to help users quickly access information and services by filtering items in the Application Navigator",
-            "A web-based method for delivering software to end users",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a navigational link in an application menu that opens specific content or functionality. Reference: ServiceNow Docs - Modules",
     },
     {
         question: "Identify the incorrect statement about delegated development in ServiceNow.",
@@ -9176,20 +6657,6 @@ const quizData = [
     },
     {
         question:
-            "As part of an application development plan, it is a best practice to define the business requirements and processes the application will manage. What considerations should be documented as part of the business process?",
-        type: "single",
-        options: [
-            "Business problem, data input/output, users/stakeholders, and process steps",
-            "Business problem, data input/output, project schedule, process steps",
-            "Business problem, data input/output, users/stakeholders, and database capacity",
-            "Business problem, users/stakeholders, available licenses, database capacity",
-        ],
-        correct: [0],
-        explanation:
-            "Documenting the business problem, data, stakeholders, and process steps ensures a clear application plan. Reference: ServiceNow Docs - Application Development Best Practices",
-    },
-    {
-        question:
             "To review scripts, reports, and other application artifacts included in a published application:",
         type: "single",
         options: [
@@ -9230,14 +6697,6 @@ const quizData = [
             "Notifications configure recipients, content, and timing; delivery method is system-managed. Reference: ServiceNow Docs - Email Notifications",
     },
     {
-        question: "Which of the following cannot be debugged using a Field Watcher?",
-        type: "single",
-        options: ["Business Rule", "Script Include", "Client Script", "Access Control"],
-        correct: [1],
-        explanation:
-            "Field Watchers monitor field changes on forms, debugging Business Rules, Client Scripts, and Access Controls, but not Script Includes. Reference: ServiceNow Docs - Field Watcher",
-    },
-    {
         question: "Which of the following is not supported in Flow Designer?",
         type: "single",
         options: [
@@ -9263,20 +6722,6 @@ const quizData = [
         correct: [3],
         explanation:
             "Extending a table inherits fields, logic, and access controls; additional behavior is not always required. Reference: ServiceNow Docs - Table Extension",
-    },
-    {
-        question: "Which of the following are true about ServiceNow reports? (Select three)",
-        type: "multiple",
-        options: [
-            "All users can view shared reports",
-            "They can represent data graphically",
-            "All users can generate reports on any table",
-            "Authorized users can run them on demand",
-            "They can be scheduled to run and distributed via email",
-        ],
-        correct: [1, 3, 4],
-        explanation:
-            "Reports can be graphical, run on demand by authorized users, and scheduled for email distribution. Not all users can view or generate reports. Reference: ServiceNow Docs - Reports",
     },
     {
         question: "Which of the following is not a trigger type in Flow Designer?",
@@ -9393,20 +6838,6 @@ const quizData = [
         correct: [1],
         explanation:
             "Field label changes in a child table affect only that table, not the parent or base. Reference: ServiceNow Docs - Form Designer",
-    },
-    {
-        question:
-            "Which of the following is not true about the Weight field in an email notification?",
-        type: "single",
-        options: [
-            "Only the notification with the highest weight for the same record and recipient is sent",
-            "A weight value of zero means the email is not sent",
-            "The default weight value is zero",
-            "A weight value of zero means the notification is always sent when the notification’s sending criteria are met",
-        ],
-        correct: [1],
-        explanation:
-            "A weight of zero means the notification is sent if criteria are met, not suppressed. Reference: ServiceNow Docs - Email Notifications",
     },
     {
         question: "Which of the following methods are useful in access control scripts?",
@@ -9556,20 +6987,6 @@ const quizData = [
             "gs.log() is restricted in scoped applications; use gs.error(), gs.warn(), or gs.debug(). Reference: ServiceNow Docs - Scoped API Logging",
     },
     {
-        question:
-            "What syntax is used in a Record Producer script to access the value of a Record Producer form field?",
-        type: "single",
-        options: [
-            "producer.field_name",
-            "producer.variablename",
-            "current.variable_name",
-            "current.field_name",
-        ],
-        correct: [1],
-        explanation:
-            "producer.variablename accesses variable values in a Record Producer script. Reference: ServiceNow Docs - Record Producer Scripts",
-    },
-    {
         question: "Which of the following is true about application scope?",
         type: "single",
         options: [
@@ -9637,7 +7054,7 @@ const quizData = [
             "ServiceNow is not ideal for low-level programming library integration; it excels in workflows, forms, and reporting. Reference: ServiceNow Docs - Application Development",
     },
     {
-        question: "Which of the following is not a purpose of application scoping?",
+        question: "Which of the following is not a purpose of application scope?",
         type: "single",
         options: [
             "Provide relationships between application artifacts",
@@ -9654,14 +7071,14 @@ const quizData = [
             "When configuring the content of an email notification, which syntax should be used to reference properties of the event that triggers the notification?",
         type: "single",
         options: [
-            "${event.<property name>}",
-            "${current.<property name>}",
-            "${<property name>.getDisplayValue()}",
-            "${gs.<property name>}",
+            "${event.< property name >}",
+            "${current.< property name >}",
+            "${< property name >.getDisplayValue()}",
+            "${gs.< property name >}",
         ],
         correct: [0],
         explanation:
-            "${event.<property name>} accesses event properties in notification content. Reference: ServiceNow Docs - Email Notifications",
+            "${event.< property name >} accesses event properties in notification content. Reference: ServiceNow Docs - Email Notifications",
     },
     {
         question:
@@ -9704,15 +7121,6 @@ const quizData = [
             "The endpoint is the URI specifying the resource for the REST request. Reference: ServiceNow Docs - REST Messages",
     },
     {
-        question:
-            "Which roles allow access to source control repository operations, such as importing an application from source control or linking an application to source control? (Select two)",
-        type: "multiple",
-        options: ["source_control", "source_control_admin", "admin", "git_admin"],
-        correct: [0, 2],
-        explanation:
-            "The source_control and admin roles grant access to source control operations. Reference: ServiceNow Docs - Source Control Roles",
-    },
-    {
         question: "Which of the following is not a client-side script debugging strategy?",
         type: "single",
         options: ["g_form.addInfoMessage()", "Field Watcher", "jslog()", "gs.log()"],
@@ -9721,27 +7129,13 @@ const quizData = [
             "gs.log() is server-side; client-side debugging uses g_form.addInfoMessage(), Field Watcher, or jslog(). Reference: ServiceNow Docs - Client Script Debugging",
     },
     {
-        question:
-            "When the Create module field is selected during table creation, what is the default behavior of the new module?",
-        type: "single",
-        options: [
-            "Opens an empty form to create a new record",
-            "Opens a link to a wiki article describing how to customize the new module’s behavior",
-            "Displays the application’s empty homepage",
-            "Displays a list of all records in the table",
-        ],
-        correct: [3],
-        explanation:
-            "The default module behavior is to display a list of all records in the table. Reference: ServiceNow Docs - Module Creation",
-    },
-    {
         question: "How many application menus can an application have?",
         type: "single",
         options: [
-            "Three: one for application user modules, one for application admin modules, and one for ServiceNow admin modules",
+            "3: one for application user modules, one for application admin modules, and one for ServiceNow admin modules",
             "As many as needed for the application design",
-            "Two: one for application user modules and one for application admin modules",
-            "One: used for all application modules",
+            "2: one for application user modules and one for application admin modules",
+            "1: used for all application modules",
         ],
         correct: [1],
         explanation:
@@ -9778,20 +7172,9 @@ const quizData = [
         explanation:
             "Setting Run to Monthly and Day to Last Day schedules the job for the last day of each month. Reference: ServiceNow Docs - Scheduled Jobs",
     },
-    {
-        question:
-            "When importing data into ServiceNow, which utility is used to determine if the field names in the import set match the field names in the target table?",
-        type: "single",
-        options: [
-            "Transform Map",
-            "Auto Map Matching Fields",
-            "CI Relationship Builder",
-            "Business Service Management Map",
-        ],
-        correct: [1],
-        explanation:
-            "Auto Map Matching Fields automatically matches import set fields to target table fields. Reference: ServiceNow Docs - Data Import",
-    },
+    
+    //todo
+
     {
         question: "When managing global application files, which of the following cannot be done?",
         type: "single",
@@ -9867,19 +7250,6 @@ const quizData = [
         correct: [3],
         explanation:
             "All scopes can read from a private scope table by default unless restricted. Reference: ServiceNow Docs - Scoped Application Tables",
-    },
-    {
-        question: "What is a module?",
-        type: "single",
-        options: [
-            "A function within an application menu, such as opening a page in a content frame or a separate tab or window",
-            "A group of menus or pages that provide related information and functionality to end users",
-            "A method to help users quickly access information and services by filtering items in the Application Navigator",
-            "A web-based method for delivering software to end users",
-        ],
-        correct: [0],
-        explanation:
-            "A module is a navigational link in an application menu. Reference: ServiceNow Docs - Modules",
     },
     {
         question:
@@ -10047,14 +7417,6 @@ const quizData = [
         correct: [2, 4],
         explanation:
             "The user must be active and have a valid email address for notifications. Reference: ServiceNow Docs - Email Notifications",
-    },
-    {
-        question: "Which of the following is not an option for the Caller Access field?",
-        type: "single",
-        options: ["Caller Tracking", "Caller Restriction", "None", "Caller Rights"],
-        correct: [3],
-        explanation:
-            "Caller Rights is not a Caller Access field option; valid options are Caller Tracking, Caller Restriction, and None. Reference: ServiceNow Docs - Caller Access",
     },
     {
         question: "Which of the following are options for the Caller Access field? (Select three)",
