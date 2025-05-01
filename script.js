@@ -213,22 +213,6 @@ const quizData = [
 
     // CAD(2024_5)
     {
-        question: "Which of the following are configured in email notifications?",
-        type: "single",
-        options: ["a, b, c", "a, b, and d", "b, c, d", "a, c, d"],
-        correct: [0],
-        explanation:
-            "Email notification configuration includes multiple aspects. Reference: ServiceNow Documentation on Email Notifications",
-    },
-    {
-        question: "Which of the following extend the value of ServiceNow?",
-        type: "single",
-        options: ["a, b, c", "a, b, c, d", "b, c, d", "a, b, d"],
-        correct: [3],
-        explanation:
-            "ServiceNow’s value is extended through specific actions. Reference: ServiceNow Documentation on Platform Value",
-    },
-    {
         question: "What is a workflow context?",
         type: "single",
         options: [
@@ -605,7 +589,7 @@ const quizData = [
         explanation: "ServiceNow uses a watermark to match incoming emails to existing records.",
     },
     {
-        question: "Which of the following statements are true about the Form Designer?",
+        question: "Which of the following statements are true about the Form Designer? a) adding fields, b) creating new fields, c) removing fields, d) duplicate fields",
         type: "single",
         options: ["a, b, c, and d", "b, c, and d", "a, b, and d", "a, b, c"],
         correct: [3],
@@ -841,7 +825,7 @@ const quizData = [
             "You cannot drag a section from the Field Types tab; sections are created differently.",
     },
     {
-        question: "Regarding Form Designer, which of the following is correct?",
+        question: "Regarding Form Designer, which of the following is correct?. a) fields are dragged from the Fields tab, b) new fields are created by dragging from Field Types and configuring, c) and fields are deleted by hovering and clicking Delete, d) Adding sections is done via the Form Layout, not Field Types",
         type: "single",
         options: ["a, b, c, d", "b, c, d", "a, b, d", "a, b, c"],
         correct: [3],
@@ -1308,7 +1292,7 @@ const quizData = [
             "Best practice is to avoid using the default update set for moving customizations between instances to prevent unintended changes. Reference: ServiceNow Update Set Best Practices.",
     },
     {
-        question: "Which statements are true about Form Designer?",
+        question: "Which statements are true about Form Designer? a) dragging fields from the Fields tab, b) creating new fields from Field Types, c) and removing fields via the Remove button, d) adding sections via drag-and-drop",
         type: "single",
         options: ["a, b, c, d", "b, c, d", "a, b, d", "a, b, c"],
         correct: [3],
@@ -1473,7 +1457,7 @@ const quizData = [
     },
     {
         question:
-            "What are the benefits of storing the majority of an application’s server-side script logic in a Script Include?",
+            "What are the benefits of storing the majority of an application’s server-side script logic in a Script Include? a) execution automatically b) execution only when called, c) hides logic in Store apps , d) and centralizes edits",
         type: "single",
         options: ["a, b, d", "a, b, c, d", "b, c, d", "a, b, c"],
         correct: [2],
