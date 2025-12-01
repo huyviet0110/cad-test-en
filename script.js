@@ -85,7 +85,7 @@ const quizData = [
       'The length of time specified in the expiration_time argument',
       'The same length of time as the expiration period for the query results cache',
     ],
-    correct: [2],
+    correct: [1],
     explanation: 'Correct Answer: C. The length of time specified in the expiration_time argument',
   },
   {
@@ -365,7 +365,7 @@ const quizData = [
       'When using a personalized listing on the Snowflake Marketplace',
       'When using a Direct Share with another account',
     ],
-    correct: [0],
+    correct: [1],
     explanation: 'Correct Answer: A. When using a paid listing on the Snowflake Marketplace',
   },
   {
@@ -454,7 +454,7 @@ const quizData = [
   },
   {
     question:
-      'A column named “Data” contains VARIANT data and stores values as follows: [image or example not shown, but context is JSON extraction]. How will Snowflake extract the employee’s name from the column data?',
+      '[Image question - check question in docx] A column named “Data” contains VARIANT data and stores values as follows: [image or example not shown, but context is JSON extraction]. How will Snowflake extract the employee’s name from the column data?',
     type: 'single',
     options: [
       'Data:employee.name',
@@ -477,7 +477,7 @@ const quizData = [
     question:
       'Which command should be used to generate a single file when unloading data from a Snowflake table into a file?',
     type: 'single',
-    options: ['PARTITION BY < expr > ', 'MAX_FILE_SIZE = 0', 'SINGLE = TRUE', 'OVERWRITE = TRUE'],
+    options: ['PARTITION BY <  expr  > ', 'MAX_FILE_SIZE = 0', 'SINGLE = TRUE', 'OVERWRITE = TRUE'],
     correct: [2],
     explanation: 'Correct Answer: C. SINGLE = TRUE',
   },
@@ -654,7 +654,7 @@ const quizData = [
     question: 'What can be used to process unstructured data?',
     type: 'single',
     options: ['External tables', 'The COPY INTO command', 'External functions', 'Snowpipe'],
-    correct: [0],
+    correct: [2],
     explanation: 'Correct Answer: A. External tables',
   },
   {
@@ -794,7 +794,7 @@ const quizData = [
     question: 'Masking policies are created at what level in Snowflake?',
     type: 'single',
     options: ['Table', 'Column', 'Schema', 'Database'],
-    correct: [1],
+    correct: [2],
     explanation: 'Correct Answer: B. Column',
   },
   {
@@ -903,7 +903,7 @@ const quizData = [
     question: 'What is the MINIMUM Snowflake edition that supports database replication?',
     type: 'single',
     options: ['Standard', 'Enterprise', 'Business Critical', 'Virtual Private Snowflake (VPS)'],
-    correct: [1],
+    correct: [0],
     explanation: 'Correct Answer: B. Enterprise',
   },
   {
@@ -1008,7 +1008,7 @@ const quizData = [
       'The stage definition',
       'The table definition',
       'The use of a COPY INTO statement',
-      'The use of a COPY INTO < location >  statement',
+      'The use of a COPY INTO <  location  >  statement',
     ],
     correct: [2],
     explanation: 'Correct Answer: C. The use of a COPY INTO statement',
@@ -1078,7 +1078,7 @@ const quizData = [
       'To view any queries that encountered an error',
       'To verify that a SELECT query will run without error',
       'To prevent a PUT statement from running if an error occurs',
-      'To see all errors from a previously run COPY INTO statement',
+      'To see all errors from a previously run COPY INTO <  table  > statement',
     ],
     correct: [3],
     explanation:
@@ -1109,9 +1109,9 @@ const quizData = [
   {
     question: 'Which command is used to unload data from a Snowflake table into a Snowflake stage?',
     type: 'single',
-    options: ['GET', 'CREATE STAGE', 'COPY INTO < location > ', 'PUT'],
+    options: ['GET', 'CREATE STAGE', 'COPY INTO <  location  > ', 'PUT'],
     correct: [2],
-    explanation: 'COPY INTO < location >  is used to unload data from a table to a stage.',
+    explanation: 'COPY INTO <  location  >  is used to unload data from a table to a stage.',
   },
   {
     question:
@@ -1129,7 +1129,7 @@ const quizData = [
   {
     question: 'Which command can be executed from a reader account?',
     type: 'single',
-    options: ['INSERT', 'CREATE SHARE', 'SHOW PROCEDURES', 'COPY INTO < location > '],
+    options: ['INSERT', 'CREATE SHARE', 'SHOW PROCEDURES', 'COPY INTO <  location  > '],
     correct: [2],
     explanation: 'Reader accounts have limited privileges; SHOW commands are allowed.',
   },
@@ -1528,7 +1528,7 @@ const quizData = [
     question:
       'Which Snowflake keywords help retrieve data without the need to completely scan a table? (Choose two.)',
     type: 'multiple',
-    options: ['TOP < n > ', 'LIMIT', 'FETCH', 'SAMPLE', 'TABLESAMPLE'],
+    options: ['TOP <  n  > ', 'LIMIT', 'FETCH', 'SAMPLE', 'TABLESAMPLE'],
     correct: [3, 4],
     explanation: 'SAMPLE and TABLESAMPLE allow sampling without full table scans.',
   },
@@ -1652,7 +1652,7 @@ const quizData = [
   },
   {
     question:
-      'What are valid values for the FIELD_OPTIONALLY_ENCLOSED_BY option in the COPY INTO < location >  command used during data unloading? (Choose two.)',
+      'What are valid values for the FIELD_OPTIONALLY_ENCLOSED_BY option in the COPY INTO <  location  >  command used during data unloading? (Choose two.)',
     type: 'multiple',
     options: ["Single quote character (')", 'NULL', "'NULL'", 'NONE', "'NONE'"],
     correct: [0, 3],
@@ -1670,7 +1670,7 @@ const quizData = [
       'Account cloud platform',
     ],
     correct: [0, 3],
-    explanation: 'Hostname format: < account_locator > .< region > .snowflakecomputing.com',
+    explanation: 'Hostname format: <  account_locator  > .<  region  > .snowflakecomputing.com',
   },
   {
     question:
@@ -2004,7 +2004,7 @@ const quizData = [
   {
     question: 'A stream object will advance its offset when it is used in which statement?',
     type: 'single',
-    options: ['SELECT', 'INSERT', 'CREATE', 'COPY INTO < location > '],
+    options: ['SELECT', 'INSERT', 'CREATE', 'COPY INTO <  location  > '],
     correct: [0],
     explanation: 'A stream advances when its changes are consumed via SELECT.',
   },
@@ -2123,10 +2123,10 @@ const quizData = [
   {
     question: 'Which command can be used to unload data from a Snowflake table to a stage?',
     type: 'single',
-    options: ['PUT', 'CREATE <  object  > ', 'COPY INTO', 'COPY INTO <  location  > '],
+    options: ['PUT', 'CREATE <   object   > ', 'COPY INTO', 'COPY INTO <   location   > '],
     correct: [3],
     explanation:
-      'COPY INTO < location >  unloads data from tables to stages or external locations.',
+      'COPY INTO <  location  >  unloads data from tables to stages or external locations.',
   },
   {
     question:
@@ -2465,7 +2465,7 @@ const quizData = [
     options: ['INSERT', 'UNLOAD', 'COPY', 'UPDATE'],
     correct: [1],
     explanation:
-      'Unloading via COPY INTO < location >  appears as an UNLOAD operator in Query Profile.',
+      'Unloading via COPY INTO <  location  >  appears as an UNLOAD operator in Query Profile.',
   },
   {
     question: 'At what levels can network policies be defined in Snowflake? (Choose two.)',
@@ -2584,7 +2584,7 @@ const quizData = [
   {
     question: 'Which command is used to download data from Snowflake to a client machine?',
     type: 'single',
-    options: ['COPY INTO < location > ', 'PUT', 'DROP', 'GET'],
+    options: ['COPY INTO <  location  > ', 'PUT', 'DROP', 'GET'],
     correct: [3],
     explanation: 'GET downloads staged files from Snowflake to the local client.',
   },
@@ -2593,10 +2593,10 @@ const quizData = [
       'Which function, when added to a SELECT statement, will return a randomly-selected, specified number of rows from a table?',
     type: 'single',
     options: [
-      'AVERAGE(< num >  ROWS)',
-      'MEDIAN(< num >  ROWS)',
-      'SAMPLE(< num >  ROWS)',
-      'RANDOM(< num >  ROWS)',
+      'AVERAGE(<  num  >  ROWS)',
+      'MEDIAN(<  num  >  ROWS)',
+      'SAMPLE(<  num  >  ROWS)',
+      'RANDOM(<  num  >  ROWS)',
     ],
     correct: [2],
     explanation: 'SAMPLE(n ROWS) returns exactly n random rows.',
@@ -2692,7 +2692,7 @@ const quizData = [
     explanation: 'Named file formats ensure consistent unloading format across sessions.',
   },
   {
-    question: 'How should the SPLIT_TO_TABLE(< string > , < delimiter > ) function be called?',
+    question: 'How should the SPLIT_TO_TABLE(<  string  > , <  delimiter  > ) function be called?',
     type: 'single',
     options: [
       "SELECT SPLIT_TO_TABLE(COL1, '.') FROM DUAL;",
@@ -2705,7 +2705,7 @@ const quizData = [
   },
   {
     question:
-      'Which configuration of the function PARSE_JSON(< expr > ) will retrieve a valid SQL NULL value?',
+      'Which configuration of the function PARSE_JSON(<  expr  > ) will retrieve a valid SQL NULL value?',
     type: 'single',
     options: [
       'SELECT parse_json(NULL)',
@@ -2728,10 +2728,10 @@ const quizData = [
     question:
       'While preparing to unload data in Snowflake, the file format option can be specified in which commands? (Choose two.)',
     type: 'multiple',
-    options: ['GET', 'CREATE STAGE', 'PUT', 'COPY INTO < location > ', 'CREATE PIPE'],
+    options: ['GET', 'CREATE STAGE', 'PUT', 'COPY INTO <  location  > ', 'CREATE PIPE'],
     correct: [1, 3],
     explanation:
-      'File format can be defined in CREATE STAGE and overridden in COPY INTO < location > .',
+      'File format can be defined in CREATE STAGE and overridden in COPY INTO <  location  > .',
   },
   {
     question: 'Which Query Profile operator provides information on pruning efficiency?',
@@ -2911,7 +2911,7 @@ const quizData = [
     question: 'What can a reader account user do when accessing shared data? (Choose two.)',
     type: 'multiple',
     options: [
-      'Insert new data using the COPY INTO < location >  command.',
+      'Insert new data using the COPY INTO <  location  >  command.',
       'Execute secure User-Defined Functions (UDFs).',
       'Remove records using the DELETE command.',
       'Select data from secure views.',
@@ -3042,14 +3042,14 @@ const quizData = [
     question: 'How can a relational table be unloaded into a JSON file?',
     type: 'single',
     options: [
-      'Use the OBJECT_CONSTRUCT function in conjunction with the COPY INTO < location >  command.',
-      'Use the COPY INTO < location >  command with the file_format set as JSON.',
+      'Use the OBJECT_CONSTRUCT function in conjunction with the COPY INTO <  location  >  command.',
+      'Use the COPY INTO <  location  >  command with the file_format set as JSON.',
       'Use the PUT command with the file_format set as JSON.',
       'Use the GET command with the file_format set as JSON.',
     ],
     correct: [1],
     explanation:
-      'COPY INTO < location >  with FILE_FORMAT = (TYPE = JSON) unloads directly to JSON.',
+      'COPY INTO <  location  >  with FILE_FORMAT = (TYPE = JSON) unloads directly to JSON.',
   },
   {
     question: 'When do Snowflake object owners lose their ability to make grant decisions?',
@@ -3068,16 +3068,16 @@ const quizData = [
     question:
       'Which command allows a user to unload data from a Snowflake database table into one or more files in a Snowflake or external stage?',
     type: 'single',
-    options: ['GET', 'LIST', 'PUT', 'COPY INTO < location > '],
+    options: ['GET', 'LIST', 'PUT', 'COPY INTO <  location  > '],
     correct: [3],
     explanation:
-      'COPY INTO < location >  is used for unloading data to internal or external stages.',
+      'COPY INTO <  location  >  is used for unloading data to internal or external stages.',
   },
   {
     question:
       'Which Snowflake feature enables loading data from cloud storage as soon as files are available in a stage?',
     type: 'single',
-    options: ['COPY_INTO < location >  command', 'Data replication', 'Snowpipe', 'Direct share'],
+    options: ['COPY_INTO <  location  >  command', 'Data replication', 'Snowpipe', 'Direct share'],
     correct: [2],
     explanation: 'Snowpipe automatically loads new files as soon as they appear in a stage.',
   },
@@ -3249,7 +3249,7 @@ const quizData = [
       'The number of nodes in Query Profile indicates the compute resources (e.g., warehouse size) used, not listed in the options.',
   },
   {
-    question: 'Which command must be included in CREATE PIPE .. AS < command >  statements?',
+    question: 'Which command must be included in CREATE PIPE .. AS <  command  >  statements?',
     type: 'single',
     options: ['COPY INTO', 'SELECT', 'PUT', 'INSERT'],
     correct: [0],
@@ -3503,7 +3503,7 @@ const quizData = [
     ],
     correct: [0, 1],
     explanation:
-      'An external stage and a file format are required to unload data to cloud storage using COPY INTO <location>.',
+      'An external stage and a file format are required to unload data to cloud storage using COPY INTO < location >.',
   },
   {
     question:
@@ -3682,16 +3682,16 @@ const quizData = [
   },
   {
     question:
-      'While unloading a relational table to JSON, which function can be combined with the COPY INTO <location> command to convert the table rows into a relational table with a single VARIANT column, and then unload the rows into a file?',
+      'While unloading a relational table to JSON, which function can be combined with the COPY INTO < location > command to convert the table rows into a relational table with a single VARIANT column, and then unload the rows into a file?',
     type: 'single',
     options: ['OBJECT_AGG', 'OBJECT_CONSTRUCT', 'OBJECT_PICK', 'OBJECT_CONSTRUCT_KEEP_NULL'],
     correct: [1],
     explanation:
-      'OBJECT_CONSTRUCT converts relational data into a JSON object (VARIANT column) for unloading with COPY INTO <location>.',
+      'OBJECT_CONSTRUCT converts relational data into a JSON object (VARIANT column) for unloading with COPY INTO < location >.',
   },
   {
     question:
-      'What target locations can be used when unloading data using the COPY INTO <location> command? (Choose two.)',
+      'What target locations can be used when unloading data using the COPY INTO < location > command? (Choose two.)',
     type: 'multiple',
     options: [
       'A Snowflake schema',
@@ -3702,7 +3702,7 @@ const quizData = [
     ],
     correct: [1, 4],
     explanation:
-      'COPY INTO <location> supports unloading to Snowflake stages (internal/external) or cloud storage.',
+      'COPY INTO < location > supports unloading to Snowflake stages (internal/external) or cloud storage.',
   },
   {
     question:
@@ -3903,7 +3903,7 @@ const quizData = [
       'A user needs to load a 270 GB dataset into Snowflake. What is the recommended FIRST step?',
     type: 'single',
     options: [
-      'Load the file using SnowSQL and the COPY INTO <location> command.',
+      'Load the file using SnowSQL and the COPY INTO < location > command.',
       'Scale-up the virtual warehouse being used to load the data.',
       'Organize the data into smaller, compressed files before loading.',
       'Load the data using Snowsight.',
@@ -4306,7 +4306,7 @@ const quizData = [
     options: ['PARSE_JSON()', 'ARRAY_CONSTRUCT()', 'OBJECT_CONSTRUCT()', 'GET'],
     correct: [2],
     explanation:
-      'OBJECT_CONSTRUCT converts structured data to JSON for unloading with COPY INTO <location>.',
+      'OBJECT_CONSTRUCT converts structured data to JSON for unloading with COPY INTO < location >.',
   },
   {
     question: 'Which action will scale-out a Snowflake virtual warehouse',
@@ -4398,7 +4398,7 @@ const quizData = [
 
   {
     question:
-      "What will be the result of this command? SELECT value FROM LATERAL FLATTEN(input => parse_json('[1, 2, 3]'));",
+      "What will be the result of this command? SELECT value FROM LATERAL FLATTEN(input = > parse_json('[1, 2, 3]'));",
     type: 'single',
     options: [
       'It will return a single row with three columns with values 1, 2, and 3.',
@@ -4437,7 +4437,7 @@ const quizData = [
     explanation: "NULL_IF = ('') replaces NULL values with an empty string during unloading.",
   },
   {
-    question: 'What does adding the PARTITION BY clause in the COPY INTO <location> command do?',
+    question: 'What does adding the PARTITION BY clause in the COPY INTO < location > command do?',
     type: 'single',
     options: [
       'It specifies which table partition will be used to copy data.',
@@ -4447,7 +4447,7 @@ const quizData = [
     ],
     correct: [1],
     explanation:
-      'PARTITION BY in COPY INTO <location> splits unloaded data into separate files based on the specified expression.',
+      'PARTITION BY in COPY INTO < location > splits unloaded data into separate files based on the specified expression.',
   },
 
   {
@@ -4792,7 +4792,7 @@ const quizData = [
     question: 'What is included in the LOAD_HISTORY view of the INFORMATION_SCHEMA? (Choose two.)',
     type: 'multiple',
     options: [
-      'A list of the COPY INTO <location> commands that were executed',
+      'A list of the COPY INTO < location > commands that were executed',
       'The names of the source and target tables',
       'The number of rows loaded from the source file',
       'A timestamp indicating when the data load was completed',
@@ -4851,20 +4851,20 @@ const quizData = [
     question:
       'When used with the UNLOAD command, which parameter specifies the destination of unloaded data?',
     type: 'single',
-    options: ['COPY INTO', 'COPY INTO <stage name>', 'GET <file name>', 'PUT <file name>'],
+    options: ['COPY INTO', 'COPY INTO < stage name >', 'GET < file name >', 'PUT < file name >'],
     correct: [1],
-    explanation: 'COPY INTO <location> is used for unloading.',
+    explanation: 'COPY INTO < location > is used for unloading.',
   },
 
   {
     question:
-      'What will happen when the VALIDATION_MODE parameter is included in a COPY INTO <location> command',
+      'What will happen when the VALIDATION_MODE parameter is included in a COPY INTO < location > command',
     type: 'single',
     options: [
       'Data will be successfully loaded if no errors are identified during the validation',
       'A validation report will be issued before the data is copied into the designated location',
       'All data will be loaded and an error report will be generated if errors are identified during the validation',
-      'The COPY INTO <location> statement will return the results of the validation and will load only error-free records',
+      'The COPY INTO < location > statement will return the results of the validation and will load only error-free records',
     ],
     correct: [1],
     explanation: '',
@@ -4915,15 +4915,15 @@ const quizData = [
     options: [
       'Use the PUT command to directly write the data to the cloud storage location URL',
       'Create an external stage referencing the cloud storage location URL and unload the table using the put command',
-      'Create a table stage referencing the cloud storage location URL and export the table using the COPY INTO <location> command',
-      'Create an external stage referencing the cloud storage location URL and unload the table using the COPY INTO <location> command',
+      'Create a table stage referencing the cloud storage location URL and export the table using the COPY INTO < location > command',
+      'Create an external stage referencing the cloud storage location URL and unload the table using the COPY INTO < location > command',
     ],
     correct: [3],
-    explanation: 'Recommended method is external stage + COPY INTO <location>.',
+    explanation: 'Recommended method is external stage + COPY INTO < location >.',
   },
   {
     question:
-      'Create an external stage referencing the cloud storage location URL and unload the table using the COPY INTO <location> command',
+      'Create an external stage referencing the cloud storage location URL and unload the table using the COPY INTO < location > command',
     type: 'single',
     options: [
       'Add more storage',
@@ -5030,10 +5030,10 @@ const quizData = [
     question: 'Which grant will provide a user with access to data that is in a Snowflake share?',
     type: 'single',
     options: [
-      'GRANT SELECT ON ALL TABLES IN DATABASE <SHARE> TO USER <USER>;',
-      'GRANT READ ON ALL TABLES IN DATABASE <SHARE> TO ROLE <ROLE>;',
-      'GRANT IMPORTED PRIVILEGES ON DATABASE <SHARE> TO ROLE <ROLE>;',
-      'GRANT USE ON DATABASE <SHARE> TO ROLE <ROLE>;',
+      'GRANT SELECT ON ALL TABLES IN DATABASE < SHARE > TO USER < USER >;',
+      'GRANT READ ON ALL TABLES IN DATABASE < SHARE > TO ROLE < ROLE >;',
+      'GRANT IMPORTED PRIVILEGES ON DATABASE < SHARE > TO ROLE < ROLE >;',
+      'GRANT USE ON DATABASE < SHARE > TO ROLE < ROLE >;',
     ],
     correct: [2],
     explanation: 'IMPORTED PRIVILEGES is required to access shared databases.',
@@ -5093,10 +5093,10 @@ const quizData = [
     question: 'Which queries need an active warehouse to run? (Choose two.)',
     type: 'multiple',
     options: [
-      'SELECT COUNT (1) FROM <TABLE_NAME>;',
-      'CREATE TABLE <TABLE_NAME> (<COLUMN> <DATATYPE>);',
-      'DESCRIBE TABLE <TABLE_NAME>;',
-      'DELETE FROM <TABLE_NAME>;',
+      'SELECT COUNT (1) FROM < TABLE_NAME >;',
+      'CREATE TABLE < TABLE_NAME > (< COLUMN > < DATATYPE >);',
+      'DESCRIBE TABLE < TABLE_NAME >;',
+      'DELETE FROM < TABLE_NAME >;',
       'SELECT * FROM ;',
     ],
     correct: [0, 3],
@@ -5213,7 +5213,7 @@ const quizData = [
       'Consumers can use resource monitors to track and limit costs.',
       'Consumers can use a single reader account to access data from multiple data providers.',
       'Providers can share data with consumers who do not have Snowflake accounts',
-      'Consumers can unload data using the COPY INTO <location> command.',
+      'Consumers can unload data using the COPY INTO < location > command.',
     ],
     correct: [1, 3],
     explanation:
@@ -5422,7 +5422,7 @@ const quizData = [
   },
   {
     question:
-      'Which function, when combined with a COPY_INTO <location> command, will convert the rows in a relational table to a single VARIANT column while the rows are being unloaded?',
+      'Which function, when combined with a COPY_INTO < location > command, will convert the rows in a relational table to a single VARIANT column while the rows are being unloaded?',
     type: 'single',
     options: ['ARRAY_AGG', 'OBJECT_CONSTRUCT', 'TO_VARIANT', 'OBJECT_AGG'],
     correct: [1],
@@ -5564,7 +5564,7 @@ const quizData = [
       'In a CREATE stage statement',
       'In a CREATE DATABASE statement',
       'In a CREATE INTEGRATION statement',
-      'In a COPY INTO <location> statement',
+      'In a COPY INTO < location > statement',
     ],
     correct: [1, 4],
     explanation: '',
@@ -5592,7 +5592,8 @@ const quizData = [
   },
 
   {
-    question: 'What is the role of the COMPRESSION parameter in the COPY INTO <location> command?',
+    question:
+      'What is the role of the COMPRESSION parameter in the COPY INTO < location > command?',
     type: 'single',
     options: [
       'It specifies the file format to use when unloading data',
@@ -5696,7 +5697,7 @@ const quizData = [
   },
   {
     question:
-      'When using the COPY INTO <location> command, which parameter is used to unload table rows into separate files?',
+      'When using the COPY INTO < location > command, which parameter is used to unload table rows into separate files?',
     type: 'single',
     options: ['DETAILED_OUTPUT', 'PARTITION BY', 'FILE_FORMAT', 'HEADER'],
     correct: [1],
@@ -5796,7 +5797,7 @@ const quizData = [
   },
   {
     question:
-      'When using the COPY INTO <location> command to unload table data into a CSV file, which option would compress the file using the default algorithm?',
+      'When using the COPY INTO < location > command to unload table data into a CSV file, which option would compress the file using the default algorithm?',
     type: 'single',
     options: ['SNAPPY', 'DEFLATE', 'NONE', 'AUTO'],
     correct: [3],
@@ -6002,7 +6003,7 @@ const quizData = [
   {
     question: 'What command is used to unload data from a Snowflake table to a local file system?',
     type: 'single',
-    options: ['COPY INTO <location>', 'GET', 'LIST', 'REMOVE'],
+    options: ['COPY INTO < location >', 'GET', 'LIST', 'REMOVE'],
     correct: [1],
     explanation: 'GET',
   },
@@ -6119,7 +6120,7 @@ const quizData = [
   },
   {
     question:
-      'When unloading data from Snowflake using the COPY INTO <location> command, what is a key consideration for handling NULL values?',
+      'When unloading data from Snowflake using the COPY INTO < location > command, what is a key consideration for handling NULL values?',
     type: 'single',
     options: [
       'NULL values are automatically converted to empty strings.',
@@ -6133,7 +6134,7 @@ const quizData = [
   },
   {
     question:
-      'When unloading data from Snowflake using the COPY INTO <location> command, what is a key consideration for handling NULL values?',
+      'When unloading data from Snowflake using the COPY INTO < location > command, what is a key consideration for handling NULL values?',
     type: 'single',
     options: [
       'NULL values are automatically converted to empty strings.',
@@ -6227,7 +6228,7 @@ const quizData = [
   },
   {
     question:
-      'Which COPY INTO <location> command options impact the number of files generated? (Select TWO.)',
+      'Which COPY INTO < location > command options impact the number of files generated? (Select TWO.)',
     type: 'multiple',
     options: ['SINGLE', 'RECORD DELIMITER', 'MAX_FILE_SIZE', 'INCLUDE_QUERY_ID', 'DETAILED_OUTPUT'],
     correct: [0, 2],
@@ -6365,7 +6366,7 @@ const quizData = [
   {
     question: 'In Snowpipe, what is the default behavior of the ON_ERROR COPY option?',
     type: 'single',
-    options: ['CONTINUE', 'SKIP_FILE', 'SKIP_FILE_<num>', 'ABORT_STATEMENT'],
+    options: ['CONTINUE', 'SKIP_FILE', 'SKIP_FILE_< num >', 'ABORT_STATEMENT'],
     correct: [0],
     explanation: 'CONTINUE',
   },
