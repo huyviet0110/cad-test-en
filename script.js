@@ -1088,7 +1088,7 @@ const quizData = [
     question: 'Which function is used to unload a relational table into a JSON file?',
     type: 'single',
     options: ['PARSE_JSON', 'JSON_EXTRACT_PATH_TEXT', 'OBJECT_CONSTRUCT', 'TO_JSON'],
-    correct: [2],
+    correct: [3],
     explanation: 'OBJECT_CONSTRUCT is used to build JSON from relational data during unloading.',
   },
   {
@@ -1130,7 +1130,7 @@ const quizData = [
     question: 'Which command can be executed from a reader account?',
     type: 'single',
     options: ['INSERT', 'CREATE SHARE', 'SHOW PROCEDURES', 'COPY INTO <  location  > '],
-    correct: [2],
+    correct: [3],
     explanation: 'Reader accounts have limited privileges; SHOW commands are allowed.',
   },
   {
@@ -1386,7 +1386,7 @@ const quizData = [
     question: 'What role should be used when creating a new user?',
     type: 'single',
     options: ['ORGADMIN', 'SECURITYADMIN', 'USERADMIN', 'SYSADMIN'],
-    correct: [2],
+    correct: [0],
     explanation: 'USERADMIN role is responsible for user creation and management.',
   },
   {
@@ -1414,7 +1414,7 @@ const quizData = [
       'What is the MINIMUM Snowflake edition required to use the query acceleration service?',
     type: 'single',
     options: ['Standard', 'Enterprise', 'Business Critical', 'Virtual Private Snowflake (VPS)'],
-    correct: [1],
+    correct: [0],
     explanation: 'Query Acceleration Service requires Enterprise edition or higher.',
   },
   {
@@ -1704,7 +1704,7 @@ const quizData = [
       'External tables',
       'Dynamic tables',
     ],
-    correct: [0, 1],
+    correct: [3, 4],
     explanation: 'Views and materialized views can be securely shared.',
   },
   {
@@ -1732,7 +1732,7 @@ const quizData = [
       'A user needs to know the maximum value of a date field in a table, and runs the following query: select max(o_orderdate) from ORDERS;. Which part of Snowflake architecture will this query use?',
     type: 'single',
     options: ['Database Storage', 'Query Processing', 'Cloud Services', 'Compute'],
-    correct: [3],
+    correct: [2],
     explanation: 'Aggregations like MAX require compute (virtual warehouse).',
   },
   {
@@ -1757,7 +1757,7 @@ const quizData = [
       'A task',
       'A User-Defined Function (UDF)',
     ],
-    correct: [0],
+    correct: [1],
     explanation: 'External stages are not cloned as they reference external storage.',
   },
   {
@@ -1835,7 +1835,7 @@ const quizData = [
       'What is the default authenticator while using the JDBC driver connection in Snowflake?',
     type: 'single',
     options: ['externalbrowser', 'snowflake', 'username_password_mfa', 'snowflake_jwt'],
-    correct: [2],
+    correct: [1],
     explanation: 'JDBC defaults to username_password_mfa.',
   },
   {
@@ -1867,11 +1867,11 @@ const quizData = [
     type: 'single',
     options: [
       'Cluster the tables',
-      'Create2018Create materialized views on the tables',
+      'Create materialized views on the tables',
       'Use the metadata cache',
       'Enable the search optimization service',
     ],
-    correct: [2],
+    correct: [1],
     explanation:
       'External table performance improves with metadata caching and materialized views.',
   },
@@ -1895,7 +1895,7 @@ const quizData = [
       'A company needs to share sales data with multiple marketing agency partners. Which Snowflake data share mechanism is recommended for this use case?',
     type: 'single',
     options: ['A shared Amazon S3 bucket', 'Direct share', 'A reader account', 'Data Exchange'],
-    correct: [3],
+    correct: [2],
     explanation: 'Data Exchange is designed for secure collaboration with multiple partners.',
   },
   {
@@ -2005,7 +2005,7 @@ const quizData = [
     question: 'A stream object will advance its offset when it is used in which statement?',
     type: 'single',
     options: ['SELECT', 'INSERT', 'CREATE', 'COPY INTO <  location  > '],
-    correct: [0],
+    correct: [1],
     explanation: 'A stream advances when its changes are consumed via SELECT.',
   },
   {
@@ -2039,7 +2039,7 @@ const quizData = [
     question: 'Which Snowflake data governance feature supports resource usage monitoring?',
     type: 'single',
     options: ['Data classification', 'Column lineage', 'Access history', 'Object tagging'],
-    correct: [2],
+    correct: [3],
     explanation: 'ACCESS_HISTORY tracks who accessed what and when.',
   },
   {
@@ -2104,7 +2104,7 @@ const quizData = [
       'The TABLE_STORAGE_METRICS view in the INFORMATION_SCHEMA',
       'The STORAGE_USAGE_HISTORY view in the INFORMATION_SCHEMA',
     ],
-    correct: [1],
+    correct: [2],
     explanation: 'ACCOUNT_USAGE.TABLE_STORAGE_METRICS has the most current data.',
   },
   {
@@ -2117,7 +2117,7 @@ const quizData = [
       'The download will fail because the result set needs to be broken up into files no greater than 50 MB before downloading.',
       'The download will result in an error because the filters of the SELECT query need to be changed so that Snowsight returns a smaller result set.',
     ],
-    correct: [0],
+    correct: [1],
     explanation: 'Snowsight allows download of result sets up to 10 GB.',
   },
   {
@@ -2147,7 +2147,7 @@ const quizData = [
       'MAX_CLUSTER_COUNT = 10',
       'ENABLE_QUERY_ACCELERATION = TRUE',
     ],
-    correct: [0],
+    correct: [2],
     explanation:
       'Using a fixed-size single-cluster warehouse (MAX_CLUSTER_COUNT = 1) avoids both over-provisioning and auto-scaling.',
   },
@@ -2245,7 +2245,7 @@ const quizData = [
       'Create streams on objects in the database.',
       'Query data from the objects in the database.',
     ],
-    correct: [0, 4],
+    correct: [3, 4],
     explanation:
       'Consumers can clone shared databases and query data, but cannot modify metadata or create streams.',
   },
@@ -2259,7 +2259,7 @@ const quizData = [
       'Prevent the user from executing additional queries.',
       'Allow the user to continue until the session or login token expires.',
     ],
-    correct: [3],
+    correct: [2],
     explanation:
       'Network policy changes do not terminate active sessions; the user can continue until session/token expires.',
   },
@@ -2267,7 +2267,7 @@ const quizData = [
     question: 'At what level is the ALLOW_CLIENT_MFA_CACHING parameter configurable in Snowflake?',
     type: 'single',
     options: ['User', 'Session', 'Account', 'Virtual warehouse'],
-    correct: [0],
+    correct: [2],
     explanation: 'ALLOW_CLIENT_MFA_CACHING is a user-level parameter.',
   },
   {
@@ -2279,7 +2279,7 @@ const quizData = [
       'Use the CREATE SHARE command.',
       'Use the GRANT command to share selected objects.',
     ],
-    correct: [0],
+    correct: [1],
     explanation:
       'Cross-Cloud Auto-Fulfillment enables secure cross-region and cross-cloud sharing via Marketplace listings.',
   },
@@ -2317,7 +2317,7 @@ const quizData = [
       'A size X-Small virtual warehouse ran for 90 seconds, and was shut down. The warehouse was then run for another 30 seconds before being shut down again. How many seconds will be billed?',
     type: 'single',
     options: ['90 seconds', '120 seconds', '150 seconds', '180 seconds'],
-    correct: [3],
+    correct: [2],
     explanation:
       'Snowflake bills in 60-second increments: 90 → 120 sec + 30 → 60 sec = 180 seconds total.',
   },
@@ -2355,7 +2355,7 @@ const quizData = [
       "mycolumn['key'].subkey",
       'mycolumn:key:subkey',
     ],
-    correct: [2, 4],
+    correct: [2, 3],
     explanation: 'Colon notation (key:subkey) works with unquoted keys; both are valid here.',
   },
   {
@@ -2368,7 +2368,7 @@ const quizData = [
       'Maximized mode',
       'Auto-scale mode',
     ],
-    correct: [2],
+    correct: [1],
     explanation: 'Maximized mode starts all clusters immediately, eliminating queuing.',
   },
   {
@@ -2463,7 +2463,7 @@ const quizData = [
       'If a query is being used to unload a 1 TB table into a stage, which DML operator will be shown in the Query Profile?',
     type: 'single',
     options: ['INSERT', 'UNLOAD', 'COPY', 'UPDATE'],
-    correct: [1],
+    correct: [2],
     explanation:
       'Unloading via COPY INTO <  location  >  appears as an UNLOAD operator in Query Profile.',
   },
@@ -2611,7 +2611,7 @@ const quizData = [
       'Object dependencies',
       'Object tagging',
     ],
-    correct: [1],
+    correct: [3],
     explanation:
       'Data classification automatically identifies and tags sensitive columns (PII, etc.).',
   },
@@ -2658,7 +2658,7 @@ const quizData = [
       'Cast the data to a VARIANT data type within the INSERT statement.',
       'Use a subquery to convert the data to a VARIANT data type and then insert it.',
     ],
-    correct: [2],
+    correct: [0],
     explanation: 'You can directly cast or use TO_VARIANT() in INSERT statements.',
   },
   {
@@ -6580,10 +6580,10 @@ function submitQuiz() {
     submittedResults[index] = isCorrect
       ? `<span class="correct"> Correct: ${item.correct
           .map((i) => String.fromCharCode(65 + i))
-          .join(', ')}</span> <br> <div class="explanation"> ${item.explanation}</div> `
+          .join(', ')}</span>`
       : `<span class="incorrect"> Incorrect</span>  - Correct Answer: ${item.correct
           .map((i) => String.fromCharCode(65 + i))
-          .join(', ')}<br> <div class="explanation"> ${item.explanation}</div> `;
+          .join(', ')}`;
 
     const resultText = document.getElementById(`result-q${index}`);
     if (resultText) {
