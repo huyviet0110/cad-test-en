@@ -1386,7 +1386,7 @@ const quizData = [
     question: 'What role should be used when creating a new user?',
     type: 'single',
     options: ['ORGADMIN', 'SECURITYADMIN', 'USERADMIN', 'SYSADMIN'],
-    correct: [0],
+    correct: [2],
     explanation: 'USERADMIN role is responsible for user creation and management.',
   },
   {
@@ -1414,7 +1414,7 @@ const quizData = [
       'What is the MINIMUM Snowflake edition required to use the query acceleration service?',
     type: 'single',
     options: ['Standard', 'Enterprise', 'Business Critical', 'Virtual Private Snowflake (VPS)'],
-    correct: [0],
+    correct: [1],
     explanation: 'Query Acceleration Service requires Enterprise edition or higher.',
   },
   {
@@ -2721,7 +2721,7 @@ const quizData = [
       'What is the MINIMUM Snowflake edition that supports the periodic rekeying of encrypted data?',
     type: 'single',
     options: ['Standard', 'Enterprise', 'Business Critical', 'Virtual Private Snowflake (VPS)'],
-    correct: [2],
+    correct: [1],
     explanation: 'Periodic data rekeying is available only in Business Critical and above.',
   },
   {
@@ -2750,7 +2750,7 @@ const quizData = [
       'The range of values for each of the columns in the full table',
       'The minimum and maximum values for each of the columns',
     ],
-    correct: [0, 4],
+    correct: [0, 3],
     explanation: 'Micro-partitions store min/max values and distinct value counts per column.',
   },
   {
@@ -2987,7 +2987,7 @@ const quizData = [
       'Which Snowflake multi-cluster virtual warehouse scaling policy or mode will MINIMIZE query queuing by prioritizing the startup of additional clusters?',
     type: 'single',
     options: ['Economy policy', 'Standard policy', 'Auto-scale mode', 'Maximized mode'],
-    correct: [3],
+    correct: [1],
     explanation: 'Maximized mode starts all clusters immediately, eliminating queuing.',
   },
   {
@@ -3047,7 +3047,7 @@ const quizData = [
       'Use the PUT command with the file_format set as JSON.',
       'Use the GET command with the file_format set as JSON.',
     ],
-    correct: [1],
+    correct: [0],
     explanation:
       'COPY INTO <  location  >  with FILE_FORMAT = (TYPE = JSON) unloads directly to JSON.',
   },
@@ -3874,7 +3874,7 @@ const quizData = [
       'To start using data listings from the Snowflake Marketplace as a provider or consumer, Snowflake customers must agree to additional terms of service and abide by Snowflake policies using which role?',
     type: 'single',
     options: ['SECURITYADMIN', 'ACCOUNTADMIN', 'SYSADMIN', 'ORGADMIN'],
-    correct: [1],
+    correct: [3],
     explanation: 'ACCOUNTADMIN is required to agree to Marketplace terms and manage listings.',
   },
   {
