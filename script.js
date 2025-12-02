@@ -454,7 +454,7 @@ const quizData = [
   },
   {
     question:
-      '[Image question - check question in docx] A column named “Data” contains VARIANT data and stores values as follows: [image or example not shown, but context is JSON extraction]. How will Snowflake extract the employee’s name from the column data?',
+      '[Image question - skip OR read docx file] A column named “Data” contains VARIANT data and stores values as follows: [image or example not shown, but context is JSON extraction]. How will Snowflake extract the employee’s name from the column data?',
     type: 'single',
     options: [
       'Data:employee.name',
@@ -1919,7 +1919,7 @@ const quizData = [
   },
   {
     question:
-      'A table named car_sales contains a single VARIANT column named src. Which queries will return the element "phone number" from the data? (Choose two.)',
+      '[Image question - skip OR read docx file] A table named car_sales contains a single VARIANT column named src. Which queries will return the element "phone number" from the data? (Choose two.)',
     type: 'multiple',
     options: [
       'SELECT src:customer.’phone number’ FROM car_sales;',
@@ -4074,7 +4074,7 @@ const quizData = [
   },
   {
     question:
-      'What do these Query Profile metrics indicate about the query micro-partition pruning?',
+      '[Image question - skip OR read docx file] What do these Query Profile metrics indicate about the query micro-partition pruning?',
     type: 'single',
     options: [
       'Queries with unpredictable data volumes.',
@@ -4521,7 +4521,7 @@ const quizData = [
 
   {
     question:
-      'The Query Profile shows the metrics of a query that ran on a size Large virtual warehouse. What steps will improve the query performance? (Choose two.)',
+      '[Image question - skip OR read docx file] The Query Profile shows the metrics of a query that ran on a size Large virtual warehouse. What steps will improve the query performance? (Choose two.)',
     type: 'multiple',
     options: [
       'Increase the MAX_CLUSTER_COUNT',
@@ -4613,7 +4613,7 @@ const quizData = [
   },
   {
     question:
-      'These commands are run in Snowflake as an ACCOUNTADMIN: USE DATABASE Demo; USE SCHEMA Public; CREATE USER ROB; GRANT SELECT on all tables in schema public to USER ROB; What is the expected output?',
+      '[Image question - skip OR read docx file] These commands are run in Snowflake as an ACCOUNTADMIN: USE DATABASE Demo; USE SCHEMA Public; CREATE USER ROB; GRANT SELECT on all tables in schema public to USER ROB; What is the expected output?',
     type: 'single',
     options: ['exercise', 'exercise', 'exercise', 'exercise.'],
     correct: [1],
@@ -4622,7 +4622,7 @@ const quizData = [
 
   {
     question:
-      'What is the recommended way to structure roles to provide users with access to database objects? Instructions: Select the options from the list on the left, drag and put them into the correct order on the right.',
+      '[Image question - skip OR read docx file] DRAG DROP Instructions: Select the options from the list on the left, drag and put them into the correct order on the right.',
     type: 'multiple',
     options: [
       'Each statement will result in a SQL compilation error.',
@@ -4666,7 +4666,7 @@ const quizData = [
 
   {
     question:
-      'What is the order of precedence of Snowflake network policies, from highest-to-lowest? Instructions: Select the network policy from the list on the left, drag and put them into the correct order on the right. Level 1 is the highest, Level 3 is the lowest.',
+      '[Image question - skip OR read docx file] DRAG DROP What is the order of precedence of Snowflake network policies, from highest-to-lowest? Instructions: Select the network policy from the list on the left, drag and put them into the correct order on the right. Level 1 is the highest, Level 3 is the lowest.',
     type: 'single',
     options: ['exercise', 'exercise', 'exercise', 'exercise', 'exercise'],
     correct: [1],
@@ -5357,7 +5357,7 @@ const quizData = [
   },
   {
     question:
-      'DRAG DROP Match the security requirements on the left with the Snowflake Continuous Data Protection feature on the right Instructions: Select the options from the list on the left, drag and put them onto the correct feature on the right.',
+      '[Image question - skip OR read docx file] DRAG DROP Match the security requirements on the left with the Snowflake Continuous Data Protection feature on the right Instructions: Select the options from the list on the left, drag and put them onto the correct feature on the right.',
     type: 'single',
     options: ['exercise', 'exercise', 'exercise', 'exercise'],
     correct: [0],
@@ -5510,7 +5510,7 @@ const quizData = [
   },
   {
     question:
-      'ROLE_A has been granted the privilege to create databases on an account. These commands are executed: [image or commands not shown] What will be the result?',
+      '[Image question - skip OR read docx file] ROLE_A has been granted the privilege to create databases on an account. These commands are executed: [image or commands not shown] What will be the result?',
     type: 'single',
     options: [
       'Users with both role_a and role_b can create objects in the schema.',
@@ -5649,7 +5649,7 @@ const quizData = [
   },
   {
     question:
-      'A user is working with data in a table MAP_IP_HOST that contains a million unique IP addresses... How can the query performance be improved?',
+      '[Image question - skip OR read docx file] A user is working with data in a table MAP_IP_HOST that contains a million unique IP addresses, along with their respective hosts. The user is running queries on a virtual warehouse named WH_XS, which is set with a MAX_CLUSTER_COUNT = 1. The user reports poor query performance when running this command: How can the query performance be improved?',
     type: 'single',
     options: [
       'Alter the warehouse and set the maximum cluster count to 3.',
@@ -5805,7 +5805,7 @@ const quizData = [
   },
   {
     question:
-      'A table was created using this statement... Which feature of this table will incur both compute and storage costs?',
+      '[Image question - skip OR read docx file] A table was created using this statement... Which feature of this table will incur both compute and storage costs?',
     type: 'single',
     options: [
       'The row access policy',
