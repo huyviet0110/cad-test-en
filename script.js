@@ -1088,7 +1088,7 @@ const quizData = [
     question: 'Which function is used to unload a relational table into a JSON file?',
     type: 'single',
     options: ['PARSE_JSON', 'JSON_EXTRACT_PATH_TEXT', 'OBJECT_CONSTRUCT', 'TO_JSON'],
-    correct: [3],
+    correct: [2],
     explanation: 'OBJECT_CONSTRUCT is used to build JSON from relational data during unloading.',
   },
   {
