@@ -4164,7 +4164,7 @@ const quizData = [
       'Object tagging',
       'Multi-Factor Authentication (MFA)',
     ],
-    correct: [0],
+    correct: [2],
     explanation:
       'Data classification identifies and tracks sensitive data for compliance and governance.',
   },
