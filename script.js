@@ -5734,7 +5734,14 @@ const quizData = [
   },
   {
     question:
-      'These queries were run at the indicated times... Which query will use the result cache?',
+      `These queries were run at the indicated times:\n
+      Query_1: Run at 2024-04-09 14:12:44.123 Select MAX (event_timestamp) from application_events;\n
+      Query_2: Run at 2024-04-09 18:22:44.123 Select MAX (event_timestamp) from application_events as ae;\n
+      Query_3: Run at 2024-04-10 19:22:44.223 Select DISTINCT (event_timestamp) from application_events;\n
+      Query_4: Run at 2024-04-10 20:22:44.123 Select distinct (event_timestamp) from application_events;\n
+      Query_5: Run at 2024-04-10 21:22:44.123 Select distinct (event_timestamp) from application_events;\n
+      Query_6: Run at 2024-04-10 22:22:44.123 Select distinct (event_timesamp) FROM application_events;\n
+      Which query will use the result cache?`,
     type: 'single',
     options: [
       'Query_2 will make use of the persisted result cache of query_1',
